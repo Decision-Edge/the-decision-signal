@@ -212,16 +212,21 @@
 
 <!-- NAV -->
 <nav class="site-nav">
-  <a href="index.html" class="nav-brand" style="display:flex;align-items:center;gap:10px">
-    <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
-      <circle cx="18" cy="18" r="16" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
-      <path d="M10 24 Q5.5 18 10 12" stroke="rgba(255,255,255,0.38)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-      <path d="M6.5 27 Q0.5 18 6.5 9" stroke="rgba(255,255,255,0.16)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-      <path d="M26 12 Q30.5 18 26 24" stroke="rgba(255,255,255,0.38)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-      <path d="M29.5 9 Q35.5 18 29.5 27" stroke="rgba(255,255,255,0.16)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-      <circle cx="18" cy="18" r="3.5" fill="#C17B2F"/>
-      <line x1="10.5" y1="18" x2="14" y2="18" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="22" y1="18" x2="25.5" y2="18" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+  <a href="index.html" class="nav-brand" style="display:flex;align-items:center;gap:11px">
+    <!-- LOGO: signal broadcast icon — amber dot, white arcs, always visible -->
+    <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;display:block">
+      <!-- Outer arcs — left side -->
+      <path d="M11 30 Q3 20 11 10" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M15 26 Q9 20 15 14" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <!-- Outer arcs — right side -->
+      <path d="M29 10 Q37 20 29 30" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M25 14 Q31 20 25 26" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <!-- Centre amber pulse -->
+      <circle cx="20" cy="20" r="4" fill="#C17B2F"/>
+      <circle cx="20" cy="20" r="7" stroke="#C17B2F" stroke-opacity="0.3" stroke-width="1.5" fill="none"/>
+      <!-- Horizontal connector lines -->
+      <line x1="15" y1="20" x2="17" y2="20" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="23" y1="20" x2="25" y2="20" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
     <div>
       <div class="nav-brand-name">The Decision Signal</div>
@@ -249,26 +254,28 @@
 <!-- TICKER -->
 <div class="ticker">
   <span class="ticker-label">Latest</span>
-  <div class="ticker-track">
-    <a href="https://youtu.be/LJyyJOzxlcA" target="_blank">New Video: A Complete Understanding of Data Science in 1 Hour</a>
-    <span>·</span>
-    <a href="https://youtu.be/eV4UzdER5d4" target="_blank">Why Trust Insights from Data Science Models?</a>
-    <span>·</span>
-    <a href="https://youtu.be/uuearKdgG-A" target="_blank">Roadmap To Become A Data Science Professional</a>
-    <span>·</span>
-    <a href="learn.html#masterclasses">Free Masterclass: From Data to Decisions — Register Now</a>
-    <span>·</span>
-    <a href="learn.html#coaching">Free 1:1 Coaching Now Open — Book a Slot</a>
-    <span>·</span>
-    <a href="https://youtu.be/LJyyJOzxlcA" target="_blank">New Video: A Complete Understanding of Data Science in 1 Hour</a>
-    <span>·</span>
-    <a href="https://youtu.be/eV4UzdER5d4" target="_blank">Why Trust Insights from Data Science Models?</a>
-    <span>·</span>
-    <a href="https://youtu.be/uuearKdgG-A" target="_blank">Roadmap To Become A Data Science Professional</a>
-    <span>·</span>
-    <a href="learn.html#masterclasses">Free Masterclass: From Data to Decisions — Register Now</a>
-    <span>·</span>
-    <a href="learn.html#coaching">Free 1:1 Coaching Now Open — Book a Slot</a>
+  <div class="ticker-overflow">
+    <div class="ticker-track">
+      <a href="https://youtu.be/LJyyJOzxlcA" target="_blank">New Video: A Complete Understanding of Data Science in 1 Hour</a>
+      <span>·</span>
+      <a href="https://youtu.be/eV4UzdER5d4" target="_blank">Why Trust Insights from Data Science Models?</a>
+      <span>·</span>
+      <a href="https://youtu.be/uuearKdgG-A" target="_blank">Roadmap To Become A Data Science Professional</a>
+      <span>·</span>
+      <a href="learn.html#masterclasses">Free Masterclass: From Data to Decisions — Register Now</a>
+      <span>·</span>
+      <a href="learn.html#coaching">Free 1:1 Coaching Now Open — Book a Slot</a>
+      <span>·</span>
+      <a href="https://youtu.be/LJyyJOzxlcA" target="_blank">New Video: A Complete Understanding of Data Science in 1 Hour</a>
+      <span>·</span>
+      <a href="https://youtu.be/eV4UzdER5d4" target="_blank">Why Trust Insights from Data Science Models?</a>
+      <span>·</span>
+      <a href="https://youtu.be/uuearKdgG-A" target="_blank">Roadmap To Become A Data Science Professional</a>
+      <span>·</span>
+      <a href="learn.html#masterclasses">Free Masterclass: From Data to Decisions — Register Now</a>
+      <span>·</span>
+      <a href="learn.html#coaching">Free 1:1 Coaching Now Open — Book a Slot</a>
+    </div>
   </div>
 </div>
 
@@ -550,15 +557,15 @@
     <!-- BRAND COLUMN -->
     <div class="footer-brand-col">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-        <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
-          <circle cx="18" cy="18" r="16" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-          <path d="M10 24 Q5.5 18 10 12" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-          <path d="M6.5 27 Q0.5 18 6.5 9" stroke="rgba(255,255,255,0.14)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-          <path d="M26 12 Q30.5 18 26 24" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-          <path d="M29.5 9 Q35.5 18 29.5 27" stroke="rgba(255,255,255,0.14)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-          <circle cx="18" cy="18" r="3.5" fill="#C17B2F"/>
-          <line x1="10.5" y1="18" x2="14" y2="18" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="22" y1="18" x2="25.5" y2="18" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round"/>
+        <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;display:block">
+          <path d="M11 30 Q3 20 11 10" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M15 26 Q9 20 15 14" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M29 10 Q37 20 29 30" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M25 14 Q31 20 25 26" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <circle cx="20" cy="20" r="4" fill="#C17B2F"/>
+          <circle cx="20" cy="20" r="7" stroke="#C17B2F" stroke-opacity="0.3" stroke-width="1.5" fill="none"/>
+          <line x1="15" y1="20" x2="17" y2="20" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="23" y1="20" x2="25" y2="20" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
         <div>
           <div class="footer-brand-name">The Decision Signal</div>
@@ -567,9 +574,9 @@
       </div>
       <p class="footer-brand-desc">An independent publication exploring the intersection of machine learning, enterprise AI, and strategic decision-making. We believe that the best decisions are data-informed, context-aware, and human-led. Our content is written for practitioners who want to go beyond the hype — into the methods, mindsets, and frameworks that actually move the needle in organisations.</p>
       <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-        <a href="mailto:mukherjee.sayan17@gmail.com" style="font-family:'DM Sans',sans-serif;font-size:11.5px;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:5px;text-decoration:none;transition:color .2s">
+        <a href="/cdn-cgi/l/email-protection#6e031b05060b1c040b0b401d0f170f005f592e09030f0702400d0103" style="font-family:'DM Sans',sans-serif;font-size:11.5px;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:5px;text-decoration:none;transition:color .2s">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
-          mukherjee.sayan17@gmail.com
+          <span class="__cf_email__" data-cfemail="9cf1e9f7f4f9eef6f9f9b2effde5fdf2adabdcfbf1fdf5f0b2fff3f1">[email&#160;protected]</span>
         </a>
         <a href="https://www.youtube.com/@knowledgesharinggroup4001" target="_blank" style="font-family:'DM Sans',sans-serif;font-size:11.5px;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:5px;text-decoration:none;transition:color .2s">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.3 2.7 12 2.7 12 2.7s-4.3 0-6.8.2c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.7 9.1.7 11.3v2.1C.7 15.5 1 17.6 1 17.6s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2C7.6 21.8 12 21.8 12 21.8s4.3 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.3-2.1.3-4.2v-2.1C23.3 9.1 23 7 23 7zM9.7 15.5V8.4l8.1 3.6-8.1 3.5z"/></svg>
@@ -613,7 +620,7 @@
         <li><a href="#terms" onclick="showModal('terms')">Terms of Use</a></li>
         <li><a href="#affiliate" onclick="showModal('affiliate')">Affiliate Disclosure</a></li>
         <li><a href="#cookies" onclick="showModal('cookies')">Cookie Policy</a></li>
-        <li><a href="mailto:mukherjee.sayan17@gmail.com">Contact Us</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#107d657b7875627a75753e637169717e212750777d71797c3e737f7d">Contact Us</a></li>
       </ul>
     </div>
 
@@ -640,7 +647,7 @@
 </div>
 <div class="toast" id="toast"></div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ── UTILS ───────────────────────────────────────────────── */
 function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('open')}
 function scrollToSubscribe(){
@@ -780,14 +787,4 @@ function closeModal() {
   document.getElementById('policyModal').classList.remove('open');
   document.body.style.overflow = '';
 }
-document.getElementById('policyModal').addEventListener('click', function(e) {
-  if (e.target === this) closeModal();
-});
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-document.querySelectorAll('#videoGrid .video-card, #articlesList .art-item').forEach(c=>{
-  c.dataset.hidden='0';
-});
-renderAll();
-</script>
-</body>
-</html>
+document.getElementById('policyModal').addEventListener(
