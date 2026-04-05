@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Learn — The Decision Signal</title>
-<meta name="description" content="Courses, masterclasses, coaching and mentorship on data science, AI and decision intelligence by Sayan Mukherjee.">
+<meta name="description" content="Courses, masterclasses, coaching and mentorship on data science, AI and decision intelligence.">
 <link rel="stylesheet" href="style.css">
 <style>
 /* HERO */
@@ -22,13 +22,13 @@
 
 /* COURSES */
 .courses-grid{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border-bottom:0.5px solid var(--rule)}
-.course-card{padding:1.75rem;border-right:0.5px solid var(--rule)}
+.course-card{padding:1.25rem;border-right:0.5px solid var(--rule)}
 .course-card:last-child{border-right:none}
 .course-status{display:inline-block;font-size:9.5px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:12px;margin-bottom:12px}
 .status-soon{background:var(--acc2);color:var(--acc)}
 .status-free{background:var(--green2);color:var(--green)}
 .status-live{background:var(--sl3);color:var(--sl2)}
-.course-img{height:100px;background:var(--sl3);border-radius:3px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;font-size:2rem}
+.course-img{width:100%;aspect-ratio:16/9;background:var(--sl3);border-radius:3px;margin-bottom:14px;overflow:hidden}.course-img img,.course-img iframe{width:100%;height:100%;border:none;display:block;object-fit:cover}
 .course-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--ink);line-height:1.25;margin-bottom:8px}
 .course-desc{font-size:13px;color:var(--inkm);line-height:1.7;margin-bottom:12px}
 .course-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
@@ -94,7 +94,7 @@
 /* LIBRARY */
 .book-card{background:#fff;border:0.5px solid var(--rule);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
 .book-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(27,47,78,.1)}
-.book-cover{height:130px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;text-align:center}
+.book-cover{height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;text-align:center;overflow:hidden;position:relative}
 .book-title-on-cover{font-family:'Playfair Display',serif;font-size:14px;color:#fff;font-weight:400;line-height:1.2;margin-bottom:6px}
 .book-author-on-cover{font-family:sans-serif;font-size:10px;color:rgba(255,255,255,.65);letter-spacing:.04em}
 .book-info{padding:12px 14px;display:flex;flex-direction:column;flex:1}
@@ -109,7 +109,7 @@
 .book-btn{font-family:sans-serif;font-size:11.5px;font-weight:500;color:var(--sl2);border:1px solid var(--sl3);padding:6px 12px;background:var(--sl3);display:block;text-align:center;transition:all .2s;margin-top:auto}
 .book-btn:hover{background:var(--sl);color:#fff;border-color:var(--sl)}
 .free-card .book-info{gap:0}
-@media(max-width:900px){#bookGrid{grid-template-columns:repeat(2,1fr)}#freeGrid{grid-template-columns:1fr}}
+@media(max-width:1100px){#bookGrid{grid-template-columns:repeat(3,1fr)}} @media(max-width:900px){#bookGrid{grid-template-columns:repeat(2,1fr)}#freeGrid{grid-template-columns:1fr}}
 .coaching-wrap{display:grid;grid-template-columns:3fr 2fr;background:#fff;border-bottom:0.5px solid var(--rule)}
 .coaching-left{padding:2rem 5%;border-right:0.5px solid var(--rule)}
 .coaching-intro{font-size:14px;color:var(--inkm);line-height:1.8;margin-bottom:1.5rem;max-width:520px}
@@ -150,7 +150,7 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="articles.html">Articles</a></li>
     <li><a href="learn.html" class="active">Learn</a></li>
-    <li><a href="about.html">About</a></li>
+    <li></li>
   </ul>
   <div class="nav-actions">
     
@@ -161,7 +161,7 @@
   </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a><a href="articles.html">Articles</a><a href="learn.html">Learn</a><a href="about.html">About</a>
+  <a href="index.html">Home</a><a href="articles.html">Articles</a><a href="learn.html">Learn</a>
   
 </div>
 
@@ -187,7 +187,7 @@
     <div class="course-card">
       <span class="course-status status-free">Free · Watch Now</span>
       <a href="https://youtu.be/LJyyJOzxlcA?si=G80AibxtEbee4aBf" target="_blank" style="display:block;margin-bottom:14px">
-        <div class="course-img" style="background:#000;height:160px;position:relative;overflow:hidden;border-radius:3px">
+        <div class="course-img" style="background:#000;width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;border-radius:3px">
           <img src="https://img.youtube.com/vi/LJyyJOzxlcA/maxresdefault.jpg"
                onerror="this.src='https://img.youtube.com/vi/LJyyJOzxlcA/hqdefault.jpg'"
                alt="A Complete Understanding of Data Science in 1 Hour"
@@ -216,7 +216,7 @@
     <div class="course-card">
       <span class="course-status status-free">Free · Watch Now</span>
       <a href="https://youtu.be/uuearKdgG-A" target="_blank" style="display:block;margin-bottom:14px">
-        <div class="course-img" style="background:#000;height:160px;position:relative;overflow:hidden;border-radius:3px">
+        <div class="course-img" style="background:#000;width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;border-radius:3px">
           <img src="https://img.youtube.com/vi/uuearKdgG-A/maxresdefault.jpg"
                onerror="this.src='https://img.youtube.com/vi/uuearKdgG-A/hqdefault.jpg'"
                alt="Roadmap To Become A Data Science Professional"
@@ -395,8 +395,8 @@
   <div class="section-label" id="coaching">1-to-1 Coaching &amp; Mentorship</div>
   <div class="coaching-wrap">
     <div class="coaching-left">
-      <h2 style="font-size:clamp(20px,2.5vw,28px);color:var(--sl);margin-bottom:10px">Work directly with Sayan</h2>
-      <p class="coaching-intro">13+ years of enterprise data science, AI strategy, and team leadership — distilled into focused sessions. Whether you want to accelerate your career, get unstuck on a real ML problem, or build an AI roadmap for your team, let's work on it together. All sessions are currently free.</p>
+      <h2 style="font-size:clamp(20px,2.5vw,28px);color:var(--sl);margin-bottom:10px">Book a Free Session</h2>
+      <p class="coaching-intro">Connect with industry experts for free mentorship, career guidance, and technical coaching. Whether you're navigating a career decision, tackling a complex AI problem, or building your data science roadmap — book a slot and get focused, practical guidance.</p>
       <div class="session-types" id="sessionTypes">
         <div class="session-card" onclick="selectSession(this,'Career Mentorship Session — CV review, career path guidance & interview prep for DS/AI roles (45 min)')" >
           <div><div class="session-name">Career Mentorship Session</div><div class="session-desc">CV review, career path guidance, interview prep for DS/AI roles</div></div>
@@ -467,11 +467,11 @@
 
   <!-- PAID BOOKS — Amazon affiliate -->
   <div style="padding:1.25rem 5% 0.75rem;background:#fff;border-bottom:0.5px solid var(--rule)">
-    <div style="font-family:sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--inkl);margin-bottom:14px">Recommended Books <span style="background:var(--acc2);color:var(--acc);padding:2px 8px;border-radius:2px;font-size:9px;margin-left:6px">Amazon Affiliate Links</span></div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px" id="bookGrid">
+    <div style="font-family:sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--inkl);margin-bottom:14px">This Week's Top Picks <span style="background:var(--acc2);color:var(--acc);padding:2px 8px;border-radius:2px;font-size:9px;margin-left:6px">Amazon Affiliate Links</span></div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px" id="bookGrid">
 
       <div class="book-card" data-bcat="ds">
-        <div class="book-cover" style="background:linear-gradient(135deg,#1B2F4E,#24426B)">
+        <div class="book-cover" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="background:linear-gradient(135deg,#1B2F4E,#24426B)">
           <div class="book-title-on-cover">The Art of Statistics</div>
           <div class="book-author-on-cover">David Spiegelhalter</div>
         </div>
@@ -479,7 +479,7 @@
           <div class="book-tag ds">Data Science</div>
           <div class="book-name">The Art of Statistics</div>
           <div class="book-auth">David Spiegelhalter</div>
-          <a href="https://www.amazon.in/s?k=The+Art+of+Statistics+Spiegelhalter&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">View on Amazon →</a>
+          <a href="https://www.amazon.in/s?k=The+Art+of+Statistics+Spiegelhalter&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">Buy at Amazon →</a>
         </div>
       </div>
 
@@ -492,7 +492,7 @@
           <div class="book-tag ai">AI &amp; ML</div>
           <div class="book-name">Prediction Machines</div>
           <div class="book-auth">Agrawal, Gans &amp; Goldfarb</div>
-          <a href="https://www.amazon.in/s?k=Prediction+Machines+Agrawal&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">View on Amazon →</a>
+          <a href="https://www.amazon.in/s?k=Prediction+Machines+Agrawal&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">Buy at Amazon →</a>
         </div>
       </div>
 
@@ -505,7 +505,7 @@
           <div class="book-tag leadership">Leadership</div>
           <div class="book-name">Thinking in Systems</div>
           <div class="book-auth">Donella Meadows</div>
-          <a href="https://www.amazon.in/s?k=Thinking+in+Systems+Meadows&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">View on Amazon →</a>
+          <a href="https://www.amazon.in/s?k=Thinking+in+Systems+Meadows&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">Buy at Amazon →</a>
         </div>
       </div>
 
@@ -518,7 +518,7 @@
           <div class="book-tag strategy">Strategy</div>
           <div class="book-name">Good Strategy Bad Strategy</div>
           <div class="book-auth">Richard Rumelt</div>
-          <a href="https://www.amazon.in/s?k=Good+Strategy+Bad+Strategy+Rumelt&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">View on Amazon →</a>
+          <a href="https://www.amazon.in/s?k=Good+Strategy+Bad+Strategy+Rumelt&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">Buy at Amazon →</a>
         </div>
       </div>
 
@@ -531,7 +531,7 @@
           <div class="book-tag ds">Data Science</div>
           <div class="book-name">Naked Statistics</div>
           <div class="book-auth">Charles Wheelan</div>
-          <a href="https://www.amazon.in/s?k=Naked+Statistics+Wheelan&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">View on Amazon →</a>
+          <a href="https://www.amazon.in/s?k=Naked+Statistics+Wheelan&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">Buy at Amazon →</a>
         </div>
       </div>
 
@@ -544,7 +544,7 @@
           <div class="book-tag ai">AI &amp; ML</div>
           <div class="book-name">The Alignment Problem</div>
           <div class="book-auth">Brian Christian</div>
-          <a href="https://www.amazon.in/s?k=The+Alignment+Problem+Brian+Christian&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">View on Amazon →</a>
+          <a href="https://www.amazon.in/s?k=The+Alignment+Problem+Brian+Christian&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">Buy at Amazon →</a>
         </div>
       </div>
 
@@ -557,7 +557,7 @@
           <div class="book-tag leadership">Leadership</div>
           <div class="book-name">The Manager's Path</div>
           <div class="book-auth">Camille Fournier</div>
-          <a href="https://www.amazon.in/s?k=The+Managers+Path+Camille+Fournier&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">View on Amazon →</a>
+          <a href="https://www.amazon.in/s?k=The+Managers+Path+Camille+Fournier&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">Buy at Amazon →</a>
         </div>
       </div>
 
@@ -570,7 +570,7 @@
           <div class="book-tag strategy">Strategy</div>
           <div class="book-name">Thinking, Fast and Slow</div>
           <div class="book-auth">Daniel Kahneman</div>
-          <a href="https://www.amazon.in/s?k=Thinking+Fast+and+Slow+Kahneman&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">View on Amazon →</a>
+          <a href="https://www.amazon.in/s?k=Thinking+Fast+and+Slow+Kahneman&tag=YOUR-AFFILIATE-ID" target="_blank" class="book-btn">Buy at Amazon →</a>
         </div>
       </div>
 
@@ -627,6 +627,53 @@
         </div>
       </div>
 
+      <div class="book-card free-card" data-bcat="free">
+        <div style="background:var(--green2);border-bottom:3px solid var(--green);padding:14px;text-align:center">
+          <div style="font-size:1.8rem;margin-bottom:4px">📖</div>
+          <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
+        </div>
+        <div class="book-info">
+          <div class="book-tag free-tag">Free Download</div>
+          <div class="book-name">Patterns, Predictions and Actions</div>
+          <div class="book-auth">Hardt &amp; Recht</div>
+          <div style="font-family:sans-serif;font-size:11.5px;color:var(--inkm);line-height:1.5;margin-bottom:8px">A graduate-level ML textbook covering prediction, decision making, and the ethics of ML — free PDF from the authors.</div>
+          <a href="https://mlstory.org/" target="_blank" class="book-btn" style="background:var(--green);color:#fff;border-color:var(--green)">Download Free PDF →</a>
+        </div>
+      </div>
+
+      <div class="book-card free-card" data-bcat="free">
+        <div style="background:var(--green2);border-bottom:3px solid var(--green);padding:14px;text-align:center">
+          <div style="font-size:1.8rem;margin-bottom:4px">📖</div>
+          <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
+        </div>
+        <div class="book-info">
+          <div class="book-tag free-tag">Free Download</div>
+          <div class="book-name">Mathematics for Machine Learning</div>
+          <div class="book-auth">Deisenroth, Faisal &amp; Ong</div>
+          <div style="font-family:sans-serif;font-size:11.5px;color:var(--inkm);line-height:1.5;margin-bottom:8px">The essential maths behind ML — linear algebra, calculus, probability. Free PDF from Cambridge University Press.</div>
+          <a href="https://mml-book.github.io/" target="_blank" class="book-btn" style="background:var(--green);color:#fff;border-color:var(--green)">Download Free PDF →</a>
+        </div>
+      </div>
+
+      <div class="book-card free-card" data-bcat="free">
+        <div style="background:var(--green2);border-bottom:3px solid var(--green);padding:14px;text-align:center">
+          <div style="font-size:1.8rem;margin-bottom:4px">📖</div>
+          <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
+        </div>
+        <div class="book-info">
+          <div class="book-tag free-tag">Free Download</div>
+          <div class="book-name">Probabilistic Machine Learning</div>
+          <div class="book-auth">Kevin Murphy</div>
+          <div style="font-family:sans-serif;font-size:11.5px;color:var(--inkm);line-height:1.5;margin-bottom:8px">A comprehensive, freely available textbook series on probabilistic approaches to ML from a Google Research scientist.</div>
+          <a href="https://probml.github.io/pml-book/" target="_blank" class="book-btn" style="background:var(--green);color:#fff;border-color:var(--green)">Read Free Online →</a>
+        </div>
+      </div>
+<div style="display:flex;align-items:center;justify-content:center;gap:6px;padding:1rem;border-top:0.5px solid var(--rule)">
+  <button onclick="freeBookPage(-1)" id="fbPrev" style="font-family:sans-serif;font-size:12px;padding:5px 12px;border:0.5px solid var(--rule);color:var(--inkm);cursor:pointer;background:#fff" disabled>← Prev</button>
+  <span id="fbInfo" style="font-family:sans-serif;font-size:12px;color:var(--inkl);padding:0 8px"></span>
+  <button onclick="freeBookPage(1)" id="fbNext" style="font-family:sans-serif;font-size:12px;padding:5px 12px;border:0.5px solid var(--rule);color:var(--inkm);cursor:pointer;background:#fff">Next →</button>
+</div>
+
     </div>
   </div>
 </div>
@@ -643,12 +690,12 @@
 
 <footer class="site-footer">
   <div class="footer-top">
-    <div><div class="footer-brand-name">The Decision Signal</div><div class="footer-brand-tag">Data · AI · Decision Intelligence</div><p class="footer-brand-desc">Practical insights on ML, enterprise AI, and the craft of turning data into decisions. By Sayan Mukherjee.</p></div>
+    <div><div class="footer-brand-name">The Decision Signal</div><div class="footer-brand-tag">Data · AI · Decision Intelligence</div><p class="footer-brand-desc">Practical insights on ML, enterprise AI, and the craft of turning data into decisions. </p></div>
     <div class="footer-col"><h4>Content</h4><ul><li><a href="articles.html">All Articles</a></li><li><a href="articles.html">Generative AI</a></li><li><a href="articles.html">ML &amp; AI</a></li></ul></div>
     <div class="footer-col"><h4>Learn</h4><ul><li><a href="learn.html">Courses</a></li><li><a href="learn.html#masterclasses">Masterclasses</a></li><li><a href="learn.html#coaching">Coaching</a></li><li><a href="https://www.youtube.com/@knowledgesharinggroup4001" target="_blank">YouTube ↗</a></li></ul></div>
-    <div class="footer-col"><h4>Connect</h4><ul><li><a href="about.html">About</a></li><li></li><li><a href="mailto:mukherjee.sayan17@gmail.com">Email</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li></li><li></li><li><a href="mailto:mukherjee.sayan17@gmail.com">Email</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span class="footer-copy">© 2026 The Decision Signal · A publication by Sayan Mukherjee · Built on GitHub Pages</span></div>
+  <div class="footer-bottom"><span class="footer-copy">© 2026 The Decision Signal  · Built on GitHub Pages</span></div>
 </footer>
 <div class="toast" id="toast"></div>
 
@@ -764,6 +811,18 @@ renderCalendar();
 
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:0.05});
 document.querySelectorAll('.course-card,.mc-item,.session-card,.book-card').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(14px)';el.style.transition='opacity 0.35s ease, transform 0.35s ease';obs.observe(el);});
+
+// Free book pagination
+let fbPage = 0; const FB_PER = 3;
+function freeBookPage(dir) {
+  const all = [...document.querySelectorAll('.free-card')];
+  fbPage = Math.max(0, Math.min(fbPage+dir, Math.ceil(all.length/FB_PER)-1));
+  all.forEach((el,i) => { el.style.display = (i>=fbPage*FB_PER && i<(fbPage+1)*FB_PER) ? 'flex' : 'none'; });
+  document.getElementById('fbPrev').disabled = fbPage===0;
+  document.getElementById('fbNext').disabled = fbPage >= Math.ceil(all.length/FB_PER)-1;
+  document.getElementById('fbInfo').textContent = `Page ${fbPage+1} of ${Math.ceil(all.length/FB_PER)}`;
+}
+(function(){ freeBookPage(0); })();
 </script>
 </body>
 </html>
