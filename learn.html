@@ -3,146 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learn — The Decision Signal</title>
+<title>Learn &amp; Grow — The Decision Signal</title>
 <meta name="description" content="Courses, masterclasses, coaching and mentorship on data science, AI and decision intelligence.">
 <link rel="stylesheet" href="style.css">
 <style>
-/* HERO */
+
 .page-hero{background:var(--sl);padding:2.5rem 5% 0;border-bottom:3px solid var(--acc)}
 .page-hero h1{font-size:clamp(26px,4vw,40px);color:#fff;margin-bottom:6px}
 .page-hero p{font-size:13.5px;color:rgba(255,255,255,0.5);margin-bottom:1.5rem}
-.learn-tabs{display:flex;gap:0}
-.learn-tab{font-size:11.5px;font-weight:400;letter-spacing:0.06em;padding:10px 18px;color:rgba(255,255,255,0.5);cursor:pointer;border-bottom:2px solid transparent;background:none;border-top:none;border-left:none;border-right:none;transition:all 0.2s}
+.learn-tabs{display:flex;gap:0;overflow-x:auto}
+.learn-tab{font-size:11.5px;font-weight:400;letter-spacing:0.06em;padding:10px 18px;color:rgba(255,255,255,0.5);cursor:pointer;border-bottom:2px solid transparent;background:none;border-top:none;border-left:none;border-right:none;transition:all 0.2s;white-space:nowrap}
 .learn-tab:hover{color:rgba(255,255,255,0.8)}
 .learn-tab.active{color:#fff;border-bottom-color:var(--acc);background:rgba(255,255,255,0.05)}
-
-/* SECTION PANELS */
 .learn-section{display:none}
 .learn-section.active{display:block}
-
-/* COURSES */
 .courses-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));background:#fff;border-bottom:0.5px solid var(--rule)}
-.course-card{padding:1.25rem;border-right:0.5px solid var(--rule)}
+.course-card{padding:1.25rem;border-right:0.5px solid var(--rule);display:flex;flex-direction:column}
 .course-card:last-child{border-right:none}
-.course-status{display:inline-block;font-size:9.5px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:12px;margin-bottom:12px}
+.course-status{display:inline-block;font-size:9.5px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:12px;margin-bottom:10px}
 .status-soon{background:var(--acc2);color:var(--acc)}
 .status-free{background:var(--green2);color:var(--green)}
-.status-live{background:var(--sl3);color:var(--sl2)}
-.course-img{width:100%;aspect-ratio:1;background:var(--sl3);border-radius:3px;margin-bottom:10px;overflow:hidden;position:relative}.course-img img,.course-img iframe{position:absolute;top:50%;left:50%;width:120%;height:120%;transform:translate(-50%,-50%);border:none;display:block;object-fit:cover}
-.course-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--ink);line-height:1.25;margin-bottom:8px}
-.course-desc{font-size:13px;color:var(--inkm);line-height:1.7;margin-bottom:12px}
-.course-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.course-tag{font-size:10.5px;background:var(--warmd);padding:3px 8px;border-radius:2px;color:var(--inkm)}
-.course-btn{width:100%;padding:10px;background:var(--sl);color:#fff;border:none;font-size:12.5px;font-weight:500;cursor:pointer;transition:background 0.2s;letter-spacing:0.04em}
+.course-img{width:100%;aspect-ratio:1;background:var(--sl3);border-radius:3px;overflow:hidden;position:relative}
+.course-title{font-family:'Playfair Display',serif;font-size:14px;color:var(--ink);line-height:1.25;margin-bottom:8px}
+.course-desc{font-size:12px;color:var(--inkm);line-height:1.65;margin-bottom:10px;flex:1}
+.course-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.course-tag{font-size:10px;background:var(--warmd);padding:2px 7px;border-radius:2px;color:var(--inkm)}
+.course-btn{width:100%;padding:9px;background:var(--sl);color:#fff;border:none;font-size:12px;font-weight:500;cursor:pointer;transition:background 0.2s}
 .course-btn:hover{background:var(--sl2)}
-.course-btn.ghost{background:transparent;border:1px solid var(--sl);color:var(--sl)}
-.course-btn.ghost:hover{background:var(--sl);color:#fff}
-
-/* MASTERCLASSES */
 .mc-list{background:#fff;border-bottom:0.5px solid var(--rule)}
-.mc-item{display:grid;grid-template-columns:90px 1fr auto;align-items:center;gap:1.5rem;padding:1.5rem 5%;border-bottom:0.5px solid var(--rule);transition:background 0.15s}
+.mc-item{display:grid;grid-template-columns:80px 1fr auto;align-items:center;gap:1.5rem;padding:1.25rem 5%;border-bottom:0.5px solid var(--rule);transition:background 0.15s}
 .mc-item:last-child{border-bottom:none}
 .mc-item:hover{background:var(--warm)}
 .mc-date-box{background:var(--sl);border-radius:3px;padding:10px;text-align:center;flex-shrink:0}
 .mc-month{font-size:9.5px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6)}
-.mc-day{font-family:'Playfair Display',serif;font-size:28px;color:#fff;line-height:1}
-.mc-body{}
+.mc-day{font-family:'Playfair Display',serif;font-size:26px;color:#fff;line-height:1}
 .mc-type{font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--acc);margin-bottom:5px}
-.mc-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--ink);line-height:1.25;margin-bottom:6px}
-.mc-meta{font-size:12px;color:var(--inkl);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.mc-title{font-family:'Playfair Display',serif;font-size:16px;color:var(--ink);line-height:1.25;margin-bottom:6px}
+.mc-meta{font-size:12px;color:var(--inkl);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .mc-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0}
-.mc-price{font-size:15px;font-weight:500;color:var(--ink)}
-.mc-btn{font-size:12px;font-weight:500;padding:8px 18px;background:var(--sl);color:#fff;border:none;cursor:pointer;transition:background 0.2s;white-space:nowrap}
+.mc-price{font-size:14px;font-weight:500;color:var(--ink)}
+.mc-btn{font-size:12px;font-weight:500;padding:7px 16px;background:var(--sl);color:#fff;border:none;cursor:pointer;transition:background 0.2s;white-space:nowrap}
 .mc-btn:hover{background:var(--sl2)}
 .mc-btn.outline{background:transparent;border:1px solid var(--sl);color:var(--sl)}
 .mc-btn.outline:hover{background:var(--sl);color:#fff}
 .mc-spots{font-size:11px;color:var(--inkl)}
-
-/* CALENDAR */
-.cal-section{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-bottom:0.5px solid var(--rule)}
-.cal-left{padding:1.75rem 5%;border-right:0.5px solid var(--rule)}
-.cal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
-.cal-month-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--sl)}
-.cal-nav-btns{display:flex;gap:8px}
-.cal-nav-btn{background:none;border:0.5px solid var(--rule);padding:4px 10px;font-size:12px;color:var(--inkm);cursor:pointer;transition:all 0.2s}
-.cal-nav-btn:hover{background:var(--sl);color:#fff;border-color:var(--sl)}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
-.cal-day-label{font-size:10px;font-weight:500;text-align:center;color:var(--inkl);padding:4px 0;text-transform:uppercase;letter-spacing:0.05em}
-.cal-day{font-size:12.5px;text-align:center;padding:7px 3px;color:var(--inkm);cursor:pointer;border-radius:2px;transition:background 0.15s;position:relative}
-.cal-day:hover{background:var(--sl3)}
-.cal-day.has-event{background:var(--sl3);color:var(--sl2);font-weight:500}
-.cal-day.today{background:var(--sl);color:#fff}
-.cal-day.empty{color:var(--warmd);cursor:default}
-.cal-day.empty:hover{background:none}
-.event-dot{width:4px;height:4px;border-radius:50%;margin:2px auto 0;background:var(--acc)}
-.cal-legend{display:flex;gap:1rem;margin-top:1rem;flex-wrap:wrap}
-.legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--inkl)}
-.legend-dot{width:8px;height:8px;border-radius:2px}
-
-.cal-right{padding:1.75rem}
-.events-label{font-size:10px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--inkl);margin-bottom:14px}
-.event-item{display:flex;gap:12px;padding:12px 0;border-bottom:0.5px solid var(--rule);align-items:flex-start}
-.event-item:last-child{border-bottom:none}
-.event-indicator{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:4px}
-.event-info{}
-.event-date{font-size:11px;color:var(--inkl);margin-bottom:2px}
-.event-name{font-size:13.5px;font-weight:500;color:var(--ink);margin-bottom:2px}
-.event-type{font-size:12px;color:var(--inkm)}
-.event-action{margin-left:auto;flex-shrink:0}
-.event-link{font-size:11.5px;font-weight:500;color:var(--sl2);cursor:pointer}
-
-/* LIBRARY */
-.book-card{background:#fff;border:0.5px solid var(--rule);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
-.book-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(27,47,78,.1)}
-.book-cover{height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;text-align:center;overflow:hidden;position:relative}
-.book-title-on-cover{font-family:'Playfair Display',serif;font-size:14px;color:#fff;font-weight:400;line-height:1.2;margin-bottom:6px}
-.book-author-on-cover{font-family:sans-serif;font-size:10px;color:rgba(255,255,255,.65);letter-spacing:.04em}
-.book-info{padding:12px 14px;display:flex;flex-direction:column;flex:1}
-.book-tag{font-size:9.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:2px 8px;border-radius:2px;display:inline-block;margin-bottom:7px;width:fit-content}
+.meta-dot{width:3px;height:3px;border-radius:50%;background:var(--inkl);display:inline-block}
+.book-card{background:#fff;border:0.5px solid var(--rule);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+.book-cover{height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;text-align:center;overflow:hidden;position:relative}
+.book-cover img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0}
+.book-title-on-cover{font-family:'Playfair Display',serif;font-size:13px;color:#fff;line-height:1.3;position:relative;z-index:1}
+.book-author-on-cover{font-size:10px;color:rgba(255,255,255,0.65);margin-top:4px;position:relative;z-index:1}
+.book-info{padding:12px;display:flex;flex-direction:column;flex:1}
+.book-tag{font-size:9px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:2px 7px;border-radius:10px;margin-bottom:8px;width:fit-content}
 .book-tag.ds{background:var(--sl3);color:var(--sl2)}
-.book-tag.ai{background:#EEEDFE;color:#534AB7}
+.book-tag.ai{background:#EDE9FE;color:#5B21B6}
 .book-tag.leadership{background:var(--green2);color:var(--green)}
 .book-tag.strategy{background:var(--acc2);color:var(--acc)}
 .book-tag.free-tag{background:var(--green2);color:var(--green)}
-.book-name{font-size:13.5px;color:var(--ink);font-weight:500;margin-bottom:3px;line-height:1.3}
-.book-auth{font-family:sans-serif;font-size:12px;color:var(--inkl);margin-bottom:10px}
-.book-btn{font-family:sans-serif;font-size:11.5px;font-weight:500;color:var(--sl2);border:1px solid var(--sl3);padding:6px 12px;background:var(--sl3);display:block;text-align:center;transition:all .2s;margin-top:auto}
-.book-btn:hover{background:var(--sl);color:#fff;border-color:var(--sl)}
-.free-card .book-info{gap:0}
-@media(max-width:1100px){#bookGrid{grid-template-columns:repeat(3,1fr)}} @media(max-width:900px){#bookGrid{grid-template-columns:repeat(2,1fr)}#freeGrid{grid-template-columns:1fr}}
+.book-name{font-family:'Playfair Display',serif;font-size:13px;color:var(--ink);line-height:1.3;margin-bottom:4px}
+.book-auth{font-size:11px;color:var(--inkl);margin-bottom:10px;flex:1}
+.book-btn{display:block;text-align:center;padding:7px 10px;background:var(--sl);color:#fff;font-size:11.5px;font-weight:500;border:1px solid var(--sl);transition:all 0.2s;cursor:pointer;text-decoration:none}
+.book-btn:hover{background:var(--sl2)}
 .coaching-wrap{display:grid;grid-template-columns:3fr 2fr;background:#fff;border-bottom:0.5px solid var(--rule)}
 .coaching-left{padding:2rem 5%;border-right:0.5px solid var(--rule)}
-.coaching-intro{font-size:14px;color:var(--inkm);line-height:1.8;margin-bottom:1.5rem;max-width:520px}
+.coaching-intro{font-size:14px;color:var(--inkm);line-height:1.8;margin-bottom:1.5rem}
 .session-types{display:flex;flex-direction:column;gap:10px}
-.session-card{border:0.5px solid var(--rule);padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;transition:border-color 0.2s;cursor:pointer}
-.session-card:hover{border-color:var(--sl2)}
-.session-card.selected{border-color:var(--sl);background:var(--sl3)}
-.session-name{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:3px}
-.session-desc{font-size:12.5px;color:var(--inkm);line-height:1.5}
-.session-price{font-size:13px;font-weight:500;color:var(--acc);white-space:nowrap;text-align:right}
+.session-card{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:14px 16px;border:0.5px solid var(--rule);cursor:pointer;transition:all 0.15s;border-radius:2px}
+.session-card:hover,.session-card.selected{background:var(--sl3);border-color:var(--sl2)}
+.session-name{font-family:'Playfair Display',serif;font-size:15px;color:var(--ink);margin-bottom:3px}
+.session-desc{font-size:12px;color:var(--inkm);line-height:1.5}
+.session-price{font-size:14px;font-weight:500;text-align:right}
 .session-duration{font-size:11px;color:var(--inkl);text-align:right}
-
-.coaching-right{padding:1.75rem}
-.booking-title{font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);margin-bottom:1.25rem}
-.booking-form{display:flex;flex-direction:column;gap:12px}
-.booking-btn{padding:11px;background:var(--sl);color:#fff;border:none;font-size:13px;font-weight:500;cursor:pointer;transition:background 0.2s;letter-spacing:0.04em}
+.coaching-right{padding:2rem}
+.booking-title{font-family:'Playfair Display',serif;font-size:18px;color:var(--sl);margin-bottom:1.25rem}
+.booking-form{display:flex;flex-direction:column;gap:14px}
+.booking-btn{padding:12px;background:var(--sl);color:#fff;border:none;font-size:13.5px;font-weight:500;cursor:pointer;transition:background 0.2s}
 .booking-btn:hover{background:var(--sl2)}
-.booking-note{font-size:11px;color:var(--inkl);text-align:center;line-height:1.6}
+.booking-note{font-size:11.5px;color:var(--inkl);line-height:1.6;text-align:center}
+.cal-section{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-bottom:0.5px solid var(--rule)}
+.cal-left{padding:1.75rem 5%;border-right:0.5px solid var(--rule)}
+.cal-right{padding:1.75rem 5%}
+.event-item{display:grid;grid-template-columns:8px 1fr auto;gap:12px;align-items:start;padding:12px 0;border-bottom:0.5px solid var(--rule)}
+.event-item:last-child{border-bottom:none}
+.event-indicator{width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0}
+.event-date{font-size:11px;color:var(--inkl);margin-bottom:2px}
+.event-name{font-size:14px;color:var(--ink);font-family:'Playfair Display',serif;margin-bottom:2px}
+.event-type{font-size:11.5px;color:var(--inkl)}
+.event-link{font-size:12px;font-weight:500;color:var(--sl2);cursor:pointer}
+.events-label{font-size:10px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--inkl);margin-bottom:14px}
+.free-strip{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.75rem 5%;background:var(--sl3);border-bottom:0.5px solid var(--rule);flex-wrap:wrap}
+.free-badge{font-size:9.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--acc);margin-bottom:6px}
+.free-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--sl);margin-bottom:6px}
+.free-desc{font-size:13px;color:var(--inkm);line-height:1.7;max-width:560px}
+@media(max-width:1100px){.courses-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important}}
+@media(max-width:900px){.courses-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.coaching-wrap{grid-template-columns:1fr}.cal-section{grid-template-columns:1fr}.mc-item{grid-template-columns:70px 1fr}}
+@media(max-width:500px){.courses-grid{grid-template-columns:1fr !important}}
 
-/* FREE STRIP */
-.free-strip{background:var(--sl3);border-top:0.5px solid var(--sl4);padding:1.5rem 5%;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.free-badge{font-size:9.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:4px}
-.free-title{font-family:'Playfair Display',serif;font-size:18px;color:var(--sl)}
-.free-desc{font-size:12.5px;color:var(--inkm);margin-top:4px}
-
-@media(max-width:1100px){.courses-grid{grid-template-columns:repeat(3,minmax(0,1fr))}} @media(max-width:900px){.courses-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cal-section{grid-template-columns:1fr}.coaching-wrap{grid-template-columns:1fr}.mc-item{grid-template-columns:70px 1fr;}.mc-right{grid-column:2;flex-direction:row;align-items:center;}} @media(max-width:600px){.courses-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.mc-item{grid-template-columns:1fr;}.mc-date-box{display:none}}
 </style>
 </head>
 <body>
-
 <nav class="site-nav">
-  <a href="index.html" class="nav-brand" style="display:flex;flex-direction:row;align-items:center;gap:11px;text-decoration:none">
+  <a href="index.html" class="nav-brand">
     <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;display:block">
       <path d="M11 30 Q3 20 11 10" stroke="#fff" stroke-opacity="0.25" stroke-width="2.5" stroke-linecap="round" fill="none"/>
       <path d="M15.5 26 Q10 20 15.5 14" stroke="#fff" stroke-opacity="0.55" stroke-width="2.5" stroke-linecap="round" fill="none"/>
@@ -153,18 +114,14 @@
       <line x1="15.5" y1="20" x2="17" y2="20" stroke="#fff" stroke-opacity="0.65" stroke-width="2" stroke-linecap="round"/>
       <line x1="23" y1="20" x2="24.5" y2="20" stroke="#fff" stroke-opacity="0.65" stroke-width="2" stroke-linecap="round"/>
     </svg>
-    <div style="display:flex;flex-direction:column;gap:1px">
+    <div>
       <div class="nav-brand-name">The Decision Signal</div>
       <div class="nav-brand-tag">Data · AI · Decision Intelligence</div>
     </div>
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="articles.html">Articles</a></li>
-    <li><a href="learn.html" class="active">Learn</a></li>
-  </ul>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="articles.html">Articles</a></li><li><a href="learn.html" class="active">Learn</a></li></ul>
   <div class="nav-actions">
-    <a href="index.html#subscribeBox" class="btn-subscribe">Subscribe</a>
+    <button class="btn-subscribe" onclick="scrollToSubscribe()">Subscribe</button>
   </div>
   <button class="nav-hamburger" onclick="toggleMobile()" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
@@ -173,26 +130,23 @@
   <a href="articles.html">Articles</a>
   <a href="learn.html">Learn</a>
 </div>
-
-<!-- TICKER -->
 <div class="ticker">
   <span class="ticker-label">Latest</span>
   <div class="ticker-overflow">
     <div class="ticker-track">
-      <a href="https://youtu.be/LJyyJOzxlcA" target="_blank">A Complete Understanding of Data Science in 1 Hour — Watch Free</a>
-      <span>·</span><a href="learn.html#masterclasses">Free Masterclass: From Data to Decisions — Register Now</a>
+      <a href="https://youtu.be/LJyyJOzxlcA" target="_blank">A Complete Understanding of Data Science in 1 Hour</a>
       <span>·</span><a href="https://youtu.be/eV4UzdER5d4" target="_blank">Why Trust Insights from Data Science Models?</a>
-      <span>·</span><a href="learn.html#coaching">Free 1:1 Coaching Sessions — Book a Slot</a>
-      <span>·</span><a href="learn.html#library">Book Library — This Week's Top Picks</a>
-      <span>·</span><a href="https://youtu.be/LJyyJOzxlcA" target="_blank">A Complete Understanding of Data Science in 1 Hour — Watch Free</a>
+      <span>·</span><a href="https://youtu.be/uuearKdgG-A" target="_blank">Roadmap To Become A Data Science Professional</a>
       <span>·</span><a href="learn.html#masterclasses">Free Masterclass: From Data to Decisions — Register Now</a>
+      <span>·</span><a href="learn.html#coaching">Free 1:1 Coaching — Book a Slot</a>
+      <span>·</span><a href="https://youtu.be/LJyyJOzxlcA" target="_blank">A Complete Understanding of Data Science in 1 Hour</a>
       <span>·</span><a href="https://youtu.be/eV4UzdER5d4" target="_blank">Why Trust Insights from Data Science Models?</a>
-      <span>·</span><a href="learn.html#coaching">Free 1:1 Coaching Sessions — Book a Slot</a>
-      <span>·</span><a href="learn.html#library">Book Library — This Week's Top Picks</a>
+      <span>·</span><a href="https://youtu.be/uuearKdgG-A" target="_blank">Roadmap To Become A Data Science Professional</a>
+      <span>·</span><a href="learn.html#masterclasses">Free Masterclass: From Data to Decisions — Register Now</a>
+      <span>·</span><a href="learn.html#coaching">Free 1:1 Coaching — Book a Slot</a>
     </div>
   </div>
 </div>
-
 <div class="page-hero">
   <h1>Learn &amp; Grow</h1>
   <p>Courses, live masterclasses, coaching and mentorship — practical and free</p>
@@ -209,13 +163,13 @@
 <!-- COURSES -->
 <div class="learn-section active" id="sec-courses">
   <div class="section-label">Upcoming Courses</div>
-  <div class="courses-grid">
+  <div class="courses-grid" style="grid-template-columns:repeat(5,minmax(0,1fr))">
 
     <!-- VIDEO 1 — A Complete Understanding of Data Science in 1 Hour -->
     <div class="course-card">
       <span class="course-status status-free">Free · Watch Now</span>
       <a href="https://youtu.be/LJyyJOzxlcA?si=G80AibxtEbee4aBf" target="_blank" style="display:block;margin-bottom:14px">
-        <div class="course-img" style="background:#000;width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;border-radius:3px">
+        <div class="course-img" style="background:#000;width:100%;aspect-ratio:1;position:relative;overflow:hidden;border-radius:3px">
           <img src="https://img.youtube.com/vi/LJyyJOzxlcA/maxresdefault.jpg"
                onerror="this.src='https://img.youtube.com/vi/LJyyJOzxlcA/hqdefault.jpg'"
                alt="A Complete Understanding of Data Science in 1 Hour"
@@ -244,7 +198,7 @@
     <div class="course-card">
       <span class="course-status status-free">Free · Watch Now</span>
       <a href="https://youtu.be/uuearKdgG-A" target="_blank" style="display:block;margin-bottom:14px">
-        <div class="course-img" style="background:#000;width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;border-radius:3px">
+        <div class="course-img" style="background:#000;width:100%;aspect-ratio:1;position:relative;overflow:hidden;border-radius:3px">
           <img src="https://img.youtube.com/vi/uuearKdgG-A/maxresdefault.jpg"
                onerror="this.src='https://img.youtube.com/vi/uuearKdgG-A/hqdefault.jpg'"
                alt="Roadmap To Become A Data Science Professional"
@@ -269,7 +223,52 @@
       </a>
     </div>
 
-    <!-- COMING SOON SLOT -->
+
+    <!-- VIDEO 3 — Why Trust Insights -->
+    <div class="course-card">
+      <span class="course-status status-free">Free · Watch Now</span>
+      <a href="https://youtu.be/eV4UzdER5d4" target="_blank" style="display:block;margin-bottom:14px">
+        <div class="course-img" style="background:#000;width:100%;aspect-ratio:1;position:relative;overflow:hidden;border-radius:3px">
+          <img src="https://img.youtube.com/vi/eV4UzdER5d4/maxresdefault.jpg"
+               onerror="this.src='https://img.youtube.com/vi/eV4UzdER5d4/hqdefault.jpg'"
+               alt="Why Trust Insights from Data Science Models"
+               style="width:100%;height:100%;object-fit:cover;display:block">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25)">
+            <div style="width:40px;height:40px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center">
+              <div style="width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:15px solid white;margin-left:3px"></div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <h3 class="course-title">Why Trust Insights from Data Science Models?</h3>
+      <p class="course-desc">A critical look at model trustworthiness — how to evaluate outputs, understand limitations, and build appropriate confidence in ML-driven decisions across enterprise settings.</p>
+      <div class="course-tags"><span class="course-tag">Model evaluation</span><span class="course-tag">ML &amp; AI</span><span class="course-tag">Free on YouTube</span></div>
+      <a href="https://youtu.be/eV4UzdER5d4" target="_blank"><button class="course-btn">Watch on YouTube →</button></a>
+    </div>
+
+    <!-- VIDEO 4 — DS vs DM vs Analytics -->
+    <div class="course-card">
+      <span class="course-status status-free">Free · Watch Now</span>
+      <a href="https://youtu.be/JkUO-jaNdF4" target="_blank" style="display:block;margin-bottom:14px">
+        <div class="course-img" style="background:#000;width:100%;aspect-ratio:1;position:relative;overflow:hidden;border-radius:3px">
+          <img src="https://img.youtube.com/vi/JkUO-jaNdF4/maxresdefault.jpg"
+               onerror="this.src='https://img.youtube.com/vi/JkUO-jaNdF4/hqdefault.jpg'"
+               alt="Data Science vs Data Mining vs Analytics"
+               style="width:100%;height:100%;object-fit:cover;display:block">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25)">
+            <div style="width:40px;height:40px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center">
+              <div style="width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:15px solid white;margin-left:3px"></div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <h3 class="course-title">Data Science vs. Data Mining vs. Analytics</h3>
+      <p class="course-desc">Cutting through the jargon — a clear breakdown of these often-confused terms and how they relate in modern data-driven organisations.</p>
+      <div class="course-tags"><span class="course-tag">13 min</span><span class="course-tag">ML &amp; AI</span><span class="course-tag">Free on YouTube</span></div>
+      <a href="https://youtu.be/JkUO-jaNdF4" target="_blank"><button class="course-btn">Watch on YouTube →</button></a>
+    </div>
+
+    <!-- COMING SOON SLOT - now 5th card -->
     <div class="course-card" style="border:1.5px dashed var(--rule);background:var(--warm)">
       <span class="course-status status-soon">Coming Soon</span>
       <div class="course-img" style="background:var(--warmd);border-radius:3px;height:160px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;margin-bottom:14px">
@@ -277,7 +276,7 @@
         <div style="font-size:11px;color:var(--inkl);letter-spacing:0.08em;text-transform:uppercase">Next video coming soon</div>
       </div>
       <h3 class="course-title">Building with LLMs: From Prompt to Production</h3>
-      <p class="course-desc">Hands-on guide to RAG pipelines, agentic frameworks, and deploying LLM-based tools in enterprise environments — based on real work at Tesco.</p>
+      <p class="course-desc">Hands-on guide to RAG pipelines, agentic frameworks, and deploying LLM-based tools in enterprise environments — based on real enterprise implementations.</p>
       <div class="course-tags">
         <span class="course-tag">~5 hrs</span>
         <span class="course-tag">Generative AI</span>
@@ -716,17 +715,43 @@
   <button class="btn-acc" onclick="notifyMe('The Data Leader\'s Playbook E-book')">Get Notified →</button>
 </div>
 
+<div class="promo-banner">
+  <div class="promo-half">
+    <div class="promo-badge">Byte Learning · Free Courses</div>
+    <h3 class="promo-title">Short Courses on Decision Science</h3>
+    <p class="promo-desc">Practical, bite-sized courses on ML, AI and data strategy for busy professionals. Free on YouTube with downloadable resources.</p>
+    <a href="learn.html" class="promo-btn">Explore Courses →</a>
+  </div>
+  <div class="promo-half">
+    <div class="promo-badge">Free · Coaching &amp; Mentorship</div>
+    <h3 class="promo-title">1-to-1 Coaching Sessions</h3>
+    <p class="promo-desc">Career mentorship, technical deep-dives, and AI strategy advisory with industry experts. Book a free slot.</p>
+    <a href="learn.html#coaching" class="promo-btn">Book a Session →</a>
+  </div>
+</div>
 <footer class="site-footer">
-  <div class="footer-top" style="grid-template-columns:2.2fr 1fr 1fr 1fr">
-    <div class="footer-brand-col">
+  <div class="footer-top">
+    <div>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" style="flex-shrink:0"><path d="M11 30 Q3 20 11 10" stroke="#fff" stroke-opacity="0.2" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M15.5 26 Q10 20 15.5 14" stroke="#fff" stroke-opacity="0.45" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M29 10 Q37 20 29 30" stroke="#fff" stroke-opacity="0.2" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M24.5 14 Q30 20 24.5 26" stroke="#fff" stroke-opacity="0.45" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="20" cy="20" r="4.5" fill="#C17B2F"/><line x1="15.5" y1="20" x2="17" y2="20" stroke="#fff" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round"/><line x1="23" y1="20" x2="24.5" y2="20" stroke="#fff" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round"/></svg>
-        <div><div class="footer-brand-name">The Decision Signal</div><div class="footer-brand-tag">Data · AI · Decision Intelligence</div></div>
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;display:block">
+          <path d="M11 30 Q3 20 11 10" stroke="#fff" stroke-opacity="0.2" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M15.5 26 Q10 20 15.5 14" stroke="#fff" stroke-opacity="0.45" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M29 10 Q37 20 29 30" stroke="#fff" stroke-opacity="0.2" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M24.5 14 Q30 20 24.5 26" stroke="#fff" stroke-opacity="0.45" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <circle cx="20" cy="20" r="4.5" fill="#C17B2F"/>
+          <circle cx="20" cy="20" r="8" stroke="#C17B2F" stroke-opacity="0.2" stroke-width="1.5" fill="none"/>
+          <line x1="15.5" y1="20" x2="17" y2="20" stroke="#fff" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+          <line x1="23" y1="20" x2="24.5" y2="20" stroke="#fff" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <div class="footer-brand-name">The Decision Signal</div>
+          <div class="footer-brand-tag">Data · AI · Decision Intelligence</div>
+        </div>
       </div>
       <p class="footer-brand-desc">An independent publication exploring the intersection of machine learning, enterprise AI, and strategic decision-making — written for practitioners who want to go beyond the hype.</p>
       <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
-        <a href="mailto:mukherjee.sayan17@gmail.com" style="font-family:'DM Sans',sans-serif;font-size:11.5px;color:rgba(255,255,255,.5);text-decoration:none">✉ mukherjee.sayan17@gmail.com</a>
-        <a href="https://www.youtube.com/@knowledgesharinggroup4001" target="_blank" style="font-family:'DM Sans',sans-serif;font-size:11.5px;color:rgba(255,255,255,.5);text-decoration:none">▶ YouTube Channel</a>
+        <a href="mailto:mukherjee.sayan17@gmail.com" style="font-size:11.5px;color:rgba(255,255,255,.5)">✉ mukherjee.sayan17@gmail.com</a>
+        <a href="https://www.youtube.com/@knowledgesharinggroup4001" target="_blank" style="font-size:11.5px;color:rgba(255,255,255,.5)">▶ YouTube Channel</a>
       </div>
     </div>
     <div class="footer-col"><h4>Content</h4><ul>
@@ -734,6 +759,7 @@
       <li><a href="articles.html?filter=genai">Generative AI</a></li>
       <li><a href="articles.html?filter=ml">ML &amp; AI</a></li>
       <li><a href="articles.html?filter=leadership">Leadership</a></li>
+      <li><a href="articles.html?filter=experimentation">Experimentation</a></li>
       <li><a href="articles.html?filter=career">Career</a></li>
     </ul></div>
     <div class="footer-col"><h4>Learn</h4><ul>
@@ -753,136 +779,21 @@
       <li><a href="mailto:mukherjee.sayan17@gmail.com">Contact Us</a></li>
     </ul></div>
   </div>
-  <div class="footer-bottom" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.07)">
+  <div class="footer-bottom">
     <span class="footer-copy">© 2026 The Decision Signal · All rights reserved · Built on GitHub Pages</span>
     <div style="display:flex;gap:1.25rem">
-      <a href="disclaimer.html" style="font-size:11px;color:rgba(255,255,255,.3);text-decoration:none">Disclaimer</a>
-      <a href="privacy.html" style="font-size:11px;color:rgba(255,255,255,.3);text-decoration:none">Privacy</a>
-      <a href="terms.html" style="font-size:11px;color:rgba(255,255,255,.3);text-decoration:none">Terms</a>
+      <a href="disclaimer.html" style="font-size:11px;color:rgba(255,255,255,.3)">Disclaimer</a>
+      <a href="privacy.html" style="font-size:11px;color:rgba(255,255,255,.3)">Privacy</a>
+      <a href="terms.html" style="font-size:11px;color:rgba(255,255,255,.3)">Terms</a>
     </div>
   </div>
 </footer>
 <div class="toast" id="toast"></div>
-
 <script>
-function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('open')}
-function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4000)}
+function toggleMobile(){{document.getElementById('mobileMenu').classList.toggle('open')}}
+function scrollToSubscribe(){{const b=document.getElementById('subscribeBox');if(b){{b.scrollIntoView({{behavior:'smooth',block:'center'}});const i=document.getElementById('subEmail');if(i)i.focus();}}}}
+function showToast(msg){{const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4000)}}
 
-// Tabs — now includes library
-document.querySelectorAll('.learn-tab').forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    document.querySelectorAll('.learn-tab').forEach(t=>t.classList.remove('active'));
-    tab.classList.add('active');
-    const s=tab.dataset.section;
-    if(s==='all'){document.querySelectorAll('.learn-section').forEach(sec=>sec.classList.add('active'));}
-    else{
-      document.querySelectorAll('.learn-section').forEach(sec=>sec.classList.remove('active'));
-      const target=document.getElementById('sec-'+s);
-      if(target)target.classList.add('active');
-    }
-  });
-});
-
-// Hash routing
-const hash=window.location.hash.replace('#','');
-if(['coaching','masterclasses','calendar','library'].includes(hash)){
-  const btn=document.querySelector(`[data-section="${hash}"]`);
-  if(btn)btn.click();
-  setTimeout(()=>document.getElementById(hash)?.scrollIntoView({behavior:'smooth'}),200);
-}
-
-function scrollToCoaching(){
-  document.querySelector('[data-section="coaching"]').click();
-  setTimeout(()=>document.getElementById('coaching').scrollIntoView({behavior:'smooth'}),200);
-}
-
-function selectSession(el,sessionName){
-  document.querySelectorAll('.session-card').forEach(c=>c.classList.remove('selected'));
-  el.classList.add('selected');
-  const sel=document.getElementById('bookSession');
-  const shortName=sessionName.split('—')[0].trim();
-  for(let opt of sel.options){if(opt.text.startsWith(shortName)){sel.value=opt.value=opt.text;break;}}
-}
-
-function bookSession(name){
-  document.querySelector('[data-section="coaching"]').click();
-  setTimeout(()=>{
-    document.getElementById('coaching').scrollIntoView({behavior:'smooth'});
-    document.getElementById('bookDesc').placeholder=`I'd like to register for: ${name}`;
-  },300);
-}
-
-function notifyMe(item){
-  const email=prompt(`Enter your email to be notified about:\n"${item}"`);
-  if(email&&email.includes('@')){
-    window.location.href=`mailto:mukherjee.sayan17@gmail.com?subject=Notify Me: ${encodeURIComponent(item)}&body=Please notify me: ${encodeURIComponent(item)}%0AEmail: ${encodeURIComponent(email)}`;
-    showToast('✓ Notification request sent!');
-  }
-}
-
-// Book filter
-function filterBooks(btn,cat){
-  document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.book-card').forEach(card=>{
-    const bcat=card.dataset.bcat;
-    card.style.display=(cat==='all'||bcat===cat)?'flex':'none';
-  });
-}
-
-// Booking form — Formspree with mailto fallback
-function submitBooking(e){
-  e.preventDefault();
-  const name=document.getElementById('bookName').value;
-  const email=document.getElementById('bookEmail').value;
-  const session=document.getElementById('bookSession').value;
-  const date=document.getElementById('bookDate').value;
-  const desc=document.getElementById('bookDesc').value;
-  const subject=`Coaching Booking: ${session}`;
-  const body=`Name: ${name}\nEmail: ${email}\nSession: ${session}\nPreferred time: ${date}\n\nWhat I'd like to work on:\n${desc}`;
-  window.location.href=`mailto:mukherjee.sayan17@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  showToast('✓ Booking request opening in your email — send it to confirm!');
-  e.target.reset();
-}
-
-// Calendar
-const events={14:'sl',23:'green',4:'sl',18:'acc',9:'sl'};
-let currentMonth=4,currentYear=2026;
-const monthNames=['January','February','March','April','May','June','July','August','September','October','November','December'];
-function renderCalendar(){
-  const grid=document.getElementById('calGrid');
-  document.getElementById('calTitle').textContent=`${monthNames[currentMonth]} ${currentYear}`;
-  const days=['M','T','W','T','F','S','S'];
-  const firstDay=new Date(currentYear,currentMonth,1).getDay();
-  const totalDays=new Date(currentYear,currentMonth+1,0).getDate();
-  const offset=firstDay===0?6:firstDay-1;
-  const prevDays=new Date(currentYear,currentMonth,0).getDate();
-  let html=days.map(d=>`<div class="cal-day-label">${d}</div>`).join('');
-  for(let i=offset-1;i>=0;i--)html+=`<div class="cal-day empty">${prevDays-i}</div>`;
-  const today=new Date();
-  for(let d=1;d<=totalDays;d++){
-    const isToday=d===today.getDate()&&currentMonth===today.getMonth()&&currentYear===today.getFullYear();
-    const hasEv=events[d];
-    let cls='cal-day'+(isToday?' today':hasEv?' has-event':'');
-    const dot=hasEv&&!isToday?`<div class="event-dot" style="background:var(--${hasEv})"></div>`:'';
-    html+=`<div class="${cls}">${d}${dot}</div>`;
-  }
-  const rem=42-(offset+totalDays);
-  for(let i=1;i<=rem;i++)html+=`<div class="cal-day empty">${i}</div>`;
-  grid.innerHTML=html;
-}
-function changeMonth(dir){currentMonth+=dir;if(currentMonth>11){currentMonth=0;currentYear++;}if(currentMonth<0){currentMonth=11;currentYear--;}renderCalendar();}
-renderCalendar();
-
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:0.05});
-document.querySelectorAll('.course-card,.mc-item,.session-card,.book-card').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(14px)';el.style.transition='opacity 0.35s ease, transform 0.35s ease';obs.observe(el);});
-
-// Free book pagination
-let fbPage = 0; const FB_PER = 3;
-function freeBookPage(dir) {
-  const all = [...document.querySelectorAll('.free-card')];
-  fbPage = Math.max(0, Math.min(fbPage+dir, Math.ceil(all.length/FB_PER)-1));
-  all.forEach((el,i) => { el.style.display = (i>=fbPage*FB_PER && i<(fbPage+1)*FB_PER) ? 'flex' : 'none'; });
-  document.getElementById('fbPrev').disabled = fbPage===0;
-  document.getElementById('fbNext').disabled = fbPage >= Math.ceil(all.length/FB_PER)-1;
-  document.
+</script>
+</body>
+</html>
