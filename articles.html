@@ -38,10 +38,9 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="articles.html" class="active">Articles</a></li>
     <li><a href="learn.html">Learn</a></li>
-    <li><a href="about.html">About</a></li>
   </ul>
   <div class="nav-actions">
-    <a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank" class="btn-li">LinkedIn ↗</a>
+    
     <a href="index.html#subscribeBox" class="btn-subscribe">Subscribe</a>
   </div>
   <button class="nav-hamburger" onclick="toggleMobile()" aria-label="Menu">
@@ -53,7 +52,7 @@
   <a href="articles.html">Articles</a>
   <a href="learn.html">Learn</a>
   <a href="about.html">About</a>
-  <a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank">LinkedIn ↗</a>
+  
 </div>
 
 <div class="page-hero">
@@ -62,7 +61,7 @@
     <p>Machine learning, enterprise AI, and decision intelligence</p>
   </div>
   <div class="page-hero-right">
-    <div id="articleCount">4 articles</div>
+    <div id="articleCount">5 articles &amp; videos</div>
     <div>Updated regularly</div>
   </div>
 </div>
@@ -85,59 +84,110 @@
      ═══════════════════════════════════════════════════════ -->
 <div class="articles-grid" id="articlesGrid">
 
+  <!-- MEDIUM ARTICLE -->
   <div class="article-card" data-cat="leadership">
-    <div class="article-card-img">📊</div>
-    <div class="article-card-cat">Data Science Leadership</div><!-- ✏️ -->
-    <h3 class="article-card-title">Why Most Data Science Teams Never Get to the Interesting Problems</h3><!-- ✏️ -->
-    <p class="article-card-exc">After 13 years building analytics teams across retail and financial services, I've noticed a pattern that holds everywhere. Most teams spend the majority of their time on data wrangling — very little on the work that moves the needle.</p><!-- ✏️ -->
+    <div class="article-card-img" style="background:var(--sl);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0">
+      <div style="font-size:28px;font-weight:700;color:rgba(255,255,255,.85);font-family:sans-serif;line-height:1">M</div>
+      <div style="font-family:sans-serif;font-size:9px;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase">Medium Article</div>
+    </div>
+    <div class="article-card-cat">Leadership · Project Management</div>
+    <h3 class="article-card-title">What Project Managers Need To Know About Pre-Mortems</h3>
+    <p class="article-card-exc">Post-mortems analyse what went wrong. Pre-mortems ask what could go wrong — before it does. A forward-looking framework every project manager should build into their practice.</p>
     <div class="article-card-foot">
-      <span class="article-card-meta">Mar 2026 · 8 min</span><!-- ✏️ -->
-      <a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank" class="article-card-link">Read on LinkedIn →</a><!-- ✏️ -->
+      <span class="article-card-meta">Dec 2020 · 4 min read</span>
+      <a href="https://smukherjee04.medium.com/what-project-managers-need-to-know-about-pre-mortems-bcb35c04848e" target="_blank" class="article-card-link">Read on Medium →</a>
     </div>
   </div>
 
-  <div class="article-card" data-cat="genai">
-    <div class="article-card-img">🤖</div>
-    <div class="article-card-cat">Generative AI</div>
-    <h3 class="article-card-title">Building an LLM Agent for Internal Audit: What Actually Worked</h3>
-    <p class="article-card-exc">RAG pipelines sound simple. Building one that audit leadership actually trusts requires unglamorous work around chunking strategy, retrieval evaluation, and prompt design.</p>
-    <div class="article-card-foot">
-      <span class="article-card-meta">Feb 2026 · 6 min</span>
-      <a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank" class="article-card-link">Read on LinkedIn →</a>
-    </div>
-  </div>
-
-  <div class="article-card" data-cat="experimentation">
-    <div class="article-card-img">🧪</div>
-    <div class="article-card-cat">Experimentation</div>
-    <h3 class="article-card-title">A/B Testing at Scale in Retail: Lessons from 50+ Store Trials</h3>
-    <p class="article-card-exc">Running store trials sounds straightforward until you realise how many ways the data can mislead you. A look at the methodology behind statistically robust retail experimentation.</p>
-    <div class="article-card-foot">
-      <span class="article-card-meta">Jan 2026 · 5 min</span>
-      <a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank" class="article-card-link">Read on LinkedIn →</a>
-    </div>
-  </div>
-
+  <!-- FORBES ARTICLE -->
   <div class="article-card" data-cat="ml">
-    <div class="article-card-img">🧠</div>
-    <div class="article-card-cat">ML &amp; AI</div>
-    <h3 class="article-card-title">What Agent-Based Modelling Taught Me About AI Ethics</h3>
-    <p class="article-card-exc">My published research on AI and happiness used simulation to understand emergent societal behaviour. The findings are relevant to anyone deploying AI at scale.</p>
+    <div class="article-card-img" style="background:#003366;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0">
+      <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,.88);font-family:sans-serif;letter-spacing:.06em">FORBES</div>
+      <div style="font-family:sans-serif;font-size:9px;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase">External Article</div>
+    </div>
+    <div class="article-card-cat">ML &amp; AI · Science</div>
+    <h3 class="article-card-title">Chaos Theory, the Butterfly Effect and the Computer Glitch That Started It All</h3>
+    <p class="article-card-exc">How a rounding error in a 1961 weather simulation gave birth to chaos theory — and why small inputs can have enormous, unpredictable consequences in complex systems.</p>
     <div class="article-card-foot">
-      <span class="article-card-meta">Dec 2025 · 7 min</span>
-      <a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank" class="article-card-link">Read on LinkedIn →</a>
+      <span class="article-card-meta">Forbes · Feb 2018</span>
+      <a href="https://www.forbes.com/sites/startswithabang/2018/02/13/chaos-theory-the-butterfly-effect-and-the-computer-glitch-that-started-it-all/" target="_blank" class="article-card-link">Read on Forbes →</a>
     </div>
   </div>
 
-  <!-- ✏️ PASTE YOUR NEW ARTICLE BLOCK HERE
+  <!-- YOUTUBE VIDEO 1 -->
+  <div class="article-card" data-cat="ml" style="padding:0;overflow:hidden">
+    <div style="aspect-ratio:16/9;background:#000">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LJyyJOzxlcA"
+              title="A Complete Understanding of Data Science in 1 Hour"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy" style="border:none;display:block"></iframe>
+    </div>
+    <div style="padding:16px 18px">
+      <div class="article-card-cat" style="display:flex;align-items:center;gap:6px">
+        <span style="background:#FF0000;color:#fff;font-size:9px;padding:2px 6px;font-family:sans-serif;font-weight:500">YT</span>
+        ML &amp; AI · Free Video
+      </div>
+      <h3 class="article-card-title">A Complete Understanding of Data Science in 1 Hour</h3>
+      <div class="article-card-foot">
+        <span class="article-card-meta">1 hr · Free</span>
+        <a href="https://youtu.be/LJyyJOzxlcA" target="_blank" class="article-card-link">Watch →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- YOUTUBE VIDEO 2 -->
+  <div class="article-card" data-cat="ml" style="padding:0;overflow:hidden">
+    <div style="aspect-ratio:16/9;background:#000">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eV4UzdER5d4"
+              title="Why Trust Insights from Data Science Models?"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy" style="border:none;display:block"></iframe>
+    </div>
+    <div style="padding:16px 18px">
+      <div class="article-card-cat" style="display:flex;align-items:center;gap:6px">
+        <span style="background:#FF0000;color:#fff;font-size:9px;padding:2px 6px;font-family:sans-serif;font-weight:500">YT</span>
+        ML &amp; AI · Free Video
+      </div>
+      <h3 class="article-card-title">Why Trust Insights from Data Science Models?</h3>
+      <div class="article-card-foot">
+        <span class="article-card-meta">Free</span>
+        <a href="https://youtu.be/eV4UzdER5d4" target="_blank" class="article-card-link">Watch →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- YOUTUBE VIDEO 3 -->
+  <div class="article-card" data-cat="career" style="padding:0;overflow:hidden">
+    <div style="aspect-ratio:16/9;background:#000">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/uuearKdgG-A"
+              title="Roadmap To Become A Data Science Professional"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy" style="border:none;display:block"></iframe>
+    </div>
+    <div style="padding:16px 18px">
+      <div class="article-card-cat" style="display:flex;align-items:center;gap:6px">
+        <span style="background:#FF0000;color:#fff;font-size:9px;padding:2px 6px;font-family:sans-serif;font-weight:500">YT</span>
+        Career · Free Video
+      </div>
+      <h3 class="article-card-title">Roadmap To Become A Data Science Professional</h3>
+      <div class="article-card-foot">
+        <span class="article-card-meta">Career guidance · Free</span>
+        <a href="https://youtu.be/uuearKdgG-A" target="_blank" class="article-card-link">Watch →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✏️ PASTE YOUR NEW ARTICLE/VIDEO HERE
   <div class="article-card" data-cat="CATEGORY_KEY">
-    <div class="article-card-img">EMOJI</div>
+    <div class="article-card-img" style="background:#1B2F4E;display:flex;align-items:center;justify-content:center">
+      SOURCE LOGO OR EMOJI
+    </div>
     <div class="article-card-cat">Category Name</div>
-    <h3 class="article-card-title">Your Article Title</h3>
-    <p class="article-card-exc">2-3 sentence summary of your article.</p>
+    <h3 class="article-card-title">Title Here</h3>
+    <p class="article-card-exc">2-3 sentence summary.</p>
     <div class="article-card-foot">
       <span class="article-card-meta">Mon YYYY · X min</span>
-      <a href="YOUR_LINKEDIN_POST_URL" target="_blank" class="article-card-link">Read on LinkedIn →</a>
+      <a href="URL" target="_blank" class="article-card-link">Read / Watch →</a>
     </div>
   </div>
   -->
@@ -163,7 +213,7 @@
     <div class="guide-step">
       <div class="guide-step-n">3</div>
       <div class="guide-step-title">Paste &amp; fill 5 fields</div>
-      <div class="guide-step-desc">Copy the template block, fill in: category key, category name, title, excerpt, date &amp; LinkedIn URL</div>
+      <div class="guide-step-desc">Copy the template block, fill in: category key, category name, title, excerpt, date &amp; Article or video URL</div>
     </div>
     <div class="guide-step">
       <div class="guide-step-n">4</div>
@@ -179,7 +229,7 @@
 &nbsp;&nbsp;&lt;p class="article-card-exc"&gt;<span style="color:#FAC775">2–3 sentence summary.</span>&lt;/p&gt;<br>
 &nbsp;&nbsp;&lt;div class="article-card-foot"&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="article-card-meta"&gt;<span style="color:#FAC775">Mon YYYY · X min</span>&lt;/span&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="<span style="color:#FAC775">YOUR_LINKEDIN_POST_URL</span>" target="_blank" class="article-card-link"&gt;Read on LinkedIn →&lt;/a&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="<span style="color:#FAC775">YOUR_ARTICLE_OR_VIDEO_URL</span>" target="_blank" class="article-card-link"&gt;Read / Watch →&lt;/a&gt;<br>
 &nbsp;&nbsp;&lt;/div&gt;<br>
 &lt;/div&gt;
   </div>
@@ -198,7 +248,7 @@
     </div>
     <div class="footer-col"><h4>Content</h4><ul><li><a href="articles.html">All Articles</a></li><li><a href="articles.html">Generative AI</a></li><li><a href="articles.html">ML &amp; AI</a></li><li><a href="articles.html">Leadership</a></li></ul></div>
     <div class="footer-col"><h4>Learn</h4><ul><li><a href="learn.html">Courses</a></li><li><a href="learn.html#masterclasses">Masterclasses</a></li><li><a href="learn.html#coaching">Coaching</a></li><li><a href="https://www.youtube.com/@knowledgesharinggroup4001" target="_blank">YouTube ↗</a></li></ul></div>
-    <div class="footer-col"><h4>Connect</h4><ul><li><a href="about.html">About</a></li><li><a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank">LinkedIn ↗</a></li><li><a href="mailto:mukherjee.sayan17@gmail.com">Email</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="about.html">About</a></li><li></li><li><a href="mailto:mukherjee.sayan17@gmail.com">Email</a></li></ul></div>
   </div>
   <div class="footer-bottom">
     <span class="footer-copy">© 2026 The Decision Signal · A publication by Sayan Mukherjee</span>
