@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles — The Decision Signal</title>
+<meta name="description" content="All articles on data science, machine learning, enterprise AI and decision intelligence by Sayan Mukherjee.">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero { background: var(--sl); padding: 2.5rem 5%; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; border-bottom: 3px solid var(--acc); }
+.page-hero h1 { font-size: clamp(28px,4vw,40px); color: #fff; margin-bottom: 5px; }
+.page-hero p { font-size: 13.5px; color: rgba(255,255,255,0.5); }
+.page-hero-right { font-size: 12px; color: rgba(255,255,255,0.35); text-align: right; }
+.filter-bar { background: var(--warm); }
+.articles-grid { display: grid; grid-template-columns: 1fr 1fr; background: #fff; }
+.articles-grid .article-card:nth-child(odd) { border-right: 0.5px solid var(--rule); }
+.add-article-guide { background: var(--acc2); border-top: 3px solid var(--acc); padding: 1.75rem 5%; }
+.guide-title { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--acc); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.guide-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 1.25rem; }
+.guide-step { background: #fff; padding: 14px; border: 0.5px solid rgba(193,123,47,0.2); }
+.guide-step-n { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--acc); margin-bottom: 5px; }
+.guide-step-title { font-size: 12.5px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+.guide-step-desc { font-size: 11.5px; color: var(--inkl); line-height: 1.6; }
+.guide-template { background: #1B2F4E; padding: 1.25rem 1.5rem; font-family: monospace; font-size: 12px; color: rgba(255,255,255,0.8); line-height: 1.9; overflow-x: auto; }
+.guide-note { font-size: 12px; color: var(--inkl); margin-top: 10px; line-height: 1.6; }
+@media(max-width:700px) { .articles-grid { grid-template-columns: 1fr; } .guide-steps { grid-template-columns: 1fr 1fr; } }
+@media(max-width:480px) { .guide-steps { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-name">The Decision Signal</div>
+    <div class="nav-brand-tag">Data · AI · Decision Intelligence</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="articles.html" class="active">Articles</a></li>
+    <li><a href="learn.html">Learn</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank" class="btn-li">LinkedIn ↗</a>
+    <a href="index.html#subscribeBox" class="btn-subscribe">Subscribe</a>
+  </div>
+  <button class="nav-hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="articles.html">Articles</a>
+  <a href="learn.html">Learn</a>
+  <a href="about.html">About</a>
+  <a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank">LinkedIn ↗</a>
+</div>
+
+<div class="page-hero">
+  <div>
+    <h1>Articles</h1>
+    <p>Machine learning, enterprise AI, and decision intelligence</p>
+  </div>
+  <div class="page-hero-right">
+    <div id="articleCount">4 articles</div>
+    <div>Updated regularly</div>
+  </div>
+</div>
+
+<div class="filter-bar" id="articleFilter">
+  <button class="filter-chip active" data-filter="all">All</button>
+  <button class="filter-chip" data-filter="ml">ML &amp; AI</button>
+  <button class="filter-chip" data-filter="genai">Generative AI</button>
+  <button class="filter-chip" data-filter="leadership">Leadership</button>
+  <button class="filter-chip" data-filter="experimentation">Experimentation</button>
+  <button class="filter-chip" data-filter="retail">Retail Analytics</button>
+  <button class="filter-chip" data-filter="career">Career</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     ARTICLES LIST
+     To add a new article: copy one .article-card block below,
+     paste it after the last one, and update the 5 ✏️ fields.
+     Then commit the file in GitHub. Done in 2 minutes.
+     ═══════════════════════════════════════════════════════ -->
+<div class="articles-grid" id="articlesGrid">
+
+  <div class="article-card" data-cat="leadership">
+    <div class="article-card-img">📊</div>
+    <div class="article-card-cat">Data Science Leadership</div><!-- ✏️ -->
+    <h3 class="article-card-title">Why Most Data Science Teams Never Get to the Interesting Problems</h3><!-- ✏️ -->
+    <p class="article-card-exc">After 13 years building analytics teams across retail and financial services, I've noticed a pattern that holds everywhere. Most teams spend the majority of their time on data wrangling — very little on the work that moves the needle.</p><!-- ✏️ -->
+    <div class="article-card-foot">
+      <span class="article-card-meta">Mar 2026 · 8 min</span><!-- ✏️ -->
+      <a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank" class="article-card-link">Read on LinkedIn →</a><!-- ✏️ -->
+    </div>
+  </div>
+
+  <div class="article-card" data-cat="genai">
+    <div class="article-card-img">🤖</div>
+    <div class="article-card-cat">Generative AI</div>
+    <h3 class="article-card-title">Building an LLM Agent for Internal Audit: What Actually Worked</h3>
+    <p class="article-card-exc">RAG pipelines sound simple. Building one that audit leadership actually trusts requires unglamorous work around chunking strategy, retrieval evaluation, and prompt design.</p>
+    <div class="article-card-foot">
+      <span class="article-card-meta">Feb 2026 · 6 min</span>
+      <a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank" class="article-card-link">Read on LinkedIn →</a>
+    </div>
+  </div>
+
+  <div class="article-card" data-cat="experimentation">
+    <div class="article-card-img">🧪</div>
+    <div class="article-card-cat">Experimentation</div>
+    <h3 class="article-card-title">A/B Testing at Scale in Retail: Lessons from 50+ Store Trials</h3>
+    <p class="article-card-exc">Running store trials sounds straightforward until you realise how many ways the data can mislead you. A look at the methodology behind statistically robust retail experimentation.</p>
+    <div class="article-card-foot">
+      <span class="article-card-meta">Jan 2026 · 5 min</span>
+      <a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank" class="article-card-link">Read on LinkedIn →</a>
+    </div>
+  </div>
+
+  <div class="article-card" data-cat="ml">
+    <div class="article-card-img">🧠</div>
+    <div class="article-card-cat">ML &amp; AI</div>
+    <h3 class="article-card-title">What Agent-Based Modelling Taught Me About AI Ethics</h3>
+    <p class="article-card-exc">My published research on AI and happiness used simulation to understand emergent societal behaviour. The findings are relevant to anyone deploying AI at scale.</p>
+    <div class="article-card-foot">
+      <span class="article-card-meta">Dec 2025 · 7 min</span>
+      <a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank" class="article-card-link">Read on LinkedIn →</a>
+    </div>
+  </div>
+
+  <!-- ✏️ PASTE YOUR NEW ARTICLE BLOCK HERE
+  <div class="article-card" data-cat="CATEGORY_KEY">
+    <div class="article-card-img">EMOJI</div>
+    <div class="article-card-cat">Category Name</div>
+    <h3 class="article-card-title">Your Article Title</h3>
+    <p class="article-card-exc">2-3 sentence summary of your article.</p>
+    <div class="article-card-foot">
+      <span class="article-card-meta">Mon YYYY · X min</span>
+      <a href="YOUR_LINKEDIN_POST_URL" target="_blank" class="article-card-link">Read on LinkedIn →</a>
+    </div>
+  </div>
+  -->
+
+</div>
+
+<div id="noResults" style="display:none;padding:3rem;text-align:center;background:#fff;color:var(--inkl);font-size:14px">No articles in this category yet. Check back soon.</div>
+
+<!-- HOW TO ADD ARTICLES GUIDE -->
+<div class="add-article-guide">
+  <div class="guide-title">✎ How to add a new article — 4 steps, no coding required</div>
+  <div class="guide-steps">
+    <div class="guide-step">
+      <div class="guide-step-n">1</div>
+      <div class="guide-step-title">Open GitHub</div>
+      <div class="guide-step-desc">Sign in at github.com, open your repository, click <code>articles.html</code></div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-step-n">2</div>
+      <div class="guide-step-title">Click the pencil ✎</div>
+      <div class="guide-step-desc">Click the edit icon top-right. Use Ctrl+F to find <code>&lt;!-- ✏️ PASTE YOUR NEW ARTICLE</code></div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-step-n">3</div>
+      <div class="guide-step-title">Paste &amp; fill 5 fields</div>
+      <div class="guide-step-desc">Copy the template block, fill in: category key, category name, title, excerpt, date &amp; LinkedIn URL</div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-step-n">4</div>
+      <div class="guide-step-title">Commit &amp; go live</div>
+      <div class="guide-step-desc">Scroll down, click "Commit changes" — your site updates within 60 seconds automatically</div>
+    </div>
+  </div>
+  <div class="guide-template">
+&lt;div class="article-card" data-cat="<span style="color:#FAC775">CATEGORY_KEY</span>"&gt;<br>
+&nbsp;&nbsp;&lt;div class="article-card-img"&gt;<span style="color:#FAC775">EMOJI</span>&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;div class="article-card-cat"&gt;<span style="color:#FAC775">Category Name</span>&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;h3 class="article-card-title"&gt;<span style="color:#FAC775">Your Article Title</span>&lt;/h3&gt;<br>
+&nbsp;&nbsp;&lt;p class="article-card-exc"&gt;<span style="color:#FAC775">2–3 sentence summary.</span>&lt;/p&gt;<br>
+&nbsp;&nbsp;&lt;div class="article-card-foot"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="article-card-meta"&gt;<span style="color:#FAC775">Mon YYYY · X min</span>&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="<span style="color:#FAC775">YOUR_LINKEDIN_POST_URL</span>" target="_blank" class="article-card-link"&gt;Read on LinkedIn →&lt;/a&gt;<br>
+&nbsp;&nbsp;&lt;/div&gt;<br>
+&lt;/div&gt;
+  </div>
+  <p class="guide-note">
+    <strong>Category keys:</strong> use exactly one of these as the <code>data-cat</code> value so the filter works:
+    <code>ml</code> · <code>genai</code> · <code>leadership</code> · <code>experimentation</code> · <code>retail</code> · <code>career</code>
+  </p>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">The Decision Signal</div>
+      <div class="footer-brand-tag">Data · AI · Decision Intelligence</div>
+      <p class="footer-brand-desc">Practical insights on machine learning, enterprise AI, and the craft of turning data into decisions. By Sayan Mukherjee.</p>
+    </div>
+    <div class="footer-col"><h4>Content</h4><ul><li><a href="articles.html">All Articles</a></li><li><a href="articles.html">Generative AI</a></li><li><a href="articles.html">ML &amp; AI</a></li><li><a href="articles.html">Leadership</a></li></ul></div>
+    <div class="footer-col"><h4>Learn</h4><ul><li><a href="learn.html">Courses</a></li><li><a href="learn.html#masterclasses">Masterclasses</a></li><li><a href="learn.html#coaching">Coaching</a></li><li><a href="https://www.youtube.com/@knowledgesharinggroup4001" target="_blank">YouTube ↗</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="about.html">About</a></li><li><a href="https://linkedin.com/in/sayan-mukherjee-bb513b22/" target="_blank">LinkedIn ↗</a></li><li><a href="mailto:mukherjee.sayan17@gmail.com">Email</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 The Decision Signal · A publication by Sayan Mukherjee</span>
+  </div>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function showToast(msg) { const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),3500); }
+
+// Filter
+const chips = document.querySelectorAll('#articleFilter .filter-chip');
+chips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    chips.forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    const f = chip.dataset.filter;
+    const cards = document.querySelectorAll('#articlesGrid .article-card');
+    let visible = 0;
+    cards.forEach(card => {
+      const show = f === 'all' || card.dataset.cat === f;
+      card.style.display = show ? 'block' : 'none';
+      if (show) visible++;
+    });
+    document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+    document.getElementById('articleCount').textContent = visible + ' article' + (visible !== 1 ? 's' : '');
+  });
+});
+
+// URL param filter
+const params = new URLSearchParams(window.location.search);
+const pf = params.get('filter');
+if (pf) {
+  const target = document.querySelector(`[data-filter="${pf}"]`);
+  if (target) target.click();
+}
+
+// Fade in
+const obs = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}}); }, {threshold:0.05});
+document.querySelectorAll('.article-card').forEach(el => { el.style.opacity='0'; el.style.transform='translateY(14px)'; el.style.transition='opacity 0.35s ease, transform 0.35s ease'; obs.observe(el); });
+</script>
+</body>
+</html>
