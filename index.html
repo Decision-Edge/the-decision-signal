@@ -146,9 +146,6 @@
     <div class="featured-badge">ML &amp; AI · Free Video</div>
     <h2 class="featured-title"><a href="https://youtu.be/LJyyJOzxlcA" target="_blank">A Complete Understanding of Data Science in 1 Hour</a></h2>
     <p class="featured-exc">A comprehensive, no-fluff session covering the full landscape of data science — what it is, how the field is structured, the tools and techniques that matter. Your definitive foundation.</p>
-    <p class="featured-exc">In this video, you will have an in-depth understanding of data science and analytics, and understand why data science is the hottest trend in the market right now.</p>
-    <p class="featured-exc">You will get a good grip on some fundamental concepts of data science and techniques and tools used in the field of analytics.</p>
-    <p class="featured-exc">You would come across industry applications and prospects of taking up data science as a career path.</p>
     <div class="featured-meta">
       <span class="meta-dot"></span><span>1 hour · Free</span>
       <span class="meta-dot"></span><span>Knowledge Sharing Group</span>
@@ -262,35 +259,30 @@
         </div>
       </div>
       <p class="footer-brand-desc">An independent publication exploring the intersection of machine learning, enterprise AI, and strategic decision-making — written for practitioners who want to go beyond the hype.</p>
-      <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
-        <a href="mailto:mukherjee.sayan17@gmail.com" style="font-size:11.5px;color:rgba(255,255,255,.5)">✉ mukherjee.sayan17@gmail.com</a>
-        <a href="https://www.youtube.com/@knowledgesharinggroup4001" target="_blank" style="font-size:11.5px;color:rgba(255,255,255,.5)">▶ YouTube Channel</a>
+      <div style="margin-top:14px">
+        <a href="mailto:mukherjee.sayan17@gmail.com" style="font-size:12px;color:rgba(255,255,255,.55);font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:6px;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.55)'">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          Contact Us
+        </a>
       </div>
     </div>
-    <div class="footer-col"><h4>Content</h4><ul>
-      <li><a href="articles.html">All Articles</a></li>
-      <li><a href="articles.html?filter=genai">Generative AI</a></li>
-      <li><a href="articles.html?filter=ml">ML &amp; AI</a></li>
-      <li><a href="articles.html?filter=leadership">Leadership</a></li>
-      <li><a href="articles.html?filter=experimentation">Experimentation</a></li>
-      <li><a href="articles.html?filter=career">Career</a></li>
-    </ul></div>
-    <div class="footer-col"><h4>Learn</h4><ul>
-      <li><a href="learn.html">Courses</a></li>
-      <li><a href="learn.html#masterclasses">Masterclasses</a></li>
-      <li><a href="learn.html#calendar">Events Calendar</a></li>
-      <li><a href="learn.html#coaching">Free Coaching</a></li>
-      <li><a href="learn.html#library">Book Library</a></li>
-      <li><a href="https://www.youtube.com/@knowledgesharinggroup4001" target="_blank">YouTube ↗</a></li>
-    </ul></div>
-    <div class="footer-col"><h4>Legal &amp; Policies</h4><ul>
-      <li><a href="disclaimer.html">Disclaimer</a></li>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="terms.html">Terms of Use</a></li>
-      <li><a href="affiliate.html">Affiliate Disclosure</a></li>
-      <li><a href="cookies.html">Cookie Policy</a></li>
-      <li><a href="mailto:mukherjee.sayan17@gmail.com">Contact Us</a></li>
-    </ul></div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="learn.html#masterclasses">Masterclasses</a></li>
+        <li><a href="learn.html#calendar">Events Calendar</a></li>
+        <li><a href="learn.html#coaching">Mentorship</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="learn.html">Courses</a></li>
+        <li><a href="articles.html">Blog</a></li>
+        <li><a href="learn.html#library">Library</a></li>
+        <li><a href="https://www.youtube.com/@knowledgesharinggroup4001" target="_blank">YouTube ↗</a></li>
+      </ul>
+    </div>
   </div>
   <div class="footer-bottom">
     <span class="footer-copy">© 2026 The Decision Signal · All rights reserved · Built on GitHub Pages</span>
@@ -302,7 +294,7 @@
   </div>
 </footer>
 <div class="toast" id="toast"></div>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleMobile(){{document.getElementById('mobileMenu').classList.toggle('open')}}
 function scrollToSubscribe(){{const b=document.getElementById('subscribeBox');if(b){{b.scrollIntoView({{behavior:'smooth',block:'center'}});const i=document.getElementById('subEmail');if(i)i.focus();}}}}
 function showToast(msg){{const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4000)}}
@@ -336,10 +328,4 @@ function renderSection(sel,prevId,nextId,infoId,page,dv){
   document.getElementById(nextId).disabled=page>=pages-1;
   document.getElementById(infoId).textContent='Page '+(page+1)+' of '+pages;
 }
-function renderV(){renderSection('#videoGrid .video-card','vPrev','vNext','vInfo',vPage,'flex');}
-function renderA(){renderSection('#artGrid .art-card','aPrev','aNext','aInfo',aPage,'flex');}
-document.querySelectorAll('#videoGrid .video-card,#artGrid .art-card').forEach(c=>c.dataset.h='0');
-renderV(); renderA();
-</script>
-</body>
-</html>
+function renderV(){renderSecti
