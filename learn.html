@@ -21,14 +21,14 @@
 .learn-section.active{display:block}
 
 /* COURSES */
-.courses-grid{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border-bottom:0.5px solid var(--rule)}
+.courses-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));background:#fff;border-bottom:0.5px solid var(--rule)}
 .course-card{padding:1.25rem;border-right:0.5px solid var(--rule)}
 .course-card:last-child{border-right:none}
 .course-status{display:inline-block;font-size:9.5px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:12px;margin-bottom:12px}
 .status-soon{background:var(--acc2);color:var(--acc)}
 .status-free{background:var(--green2);color:var(--green)}
 .status-live{background:var(--sl3);color:var(--sl2)}
-.course-img{width:100%;aspect-ratio:16/9;background:var(--sl3);border-radius:3px;margin-bottom:14px;overflow:hidden}.course-img img,.course-img iframe{width:100%;height:100%;border:none;display:block;object-fit:cover}
+.course-img{width:100%;aspect-ratio:1;background:var(--sl3);border-radius:3px;margin-bottom:10px;overflow:hidden;position:relative}.course-img img,.course-img iframe{position:absolute;top:50%;left:50%;width:120%;height:120%;transform:translate(-50%,-50%);border:none;display:block;object-fit:cover}
 .course-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--ink);line-height:1.25;margin-bottom:8px}
 .course-desc{font-size:13px;color:var(--inkm);line-height:1.7;margin-bottom:12px}
 .course-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
@@ -135,7 +135,7 @@
 .free-title{font-family:'Playfair Display',serif;font-size:18px;color:var(--sl)}
 .free-desc{font-size:12.5px;color:var(--inkm);margin-top:4px}
 
-@media(max-width:900px){.courses-grid{grid-template-columns:1fr}.cal-section{grid-template-columns:1fr}.coaching-wrap{grid-template-columns:1fr}.mc-item{grid-template-columns:70px 1fr;}.mc-right{grid-column:2;flex-direction:row;align-items:center;}}
+@media(max-width:1100px){.courses-grid{grid-template-columns:repeat(3,minmax(0,1fr))}} @media(max-width:900px){.courses-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cal-section{grid-template-columns:1fr}.coaching-wrap{grid-template-columns:1fr}.mc-item{grid-template-columns:70px 1fr;}.mc-right{grid-column:2;flex-direction:row;align-items:center;}} @media(max-width:600px){.courses-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.mc-item{grid-template-columns:1fr;}.mc-date-box{display:none}}
 </style>
 </head>
@@ -471,7 +471,7 @@
     <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px" id="bookGrid">
 
       <div class="book-card" data-bcat="ds">
-        <div class="book-cover" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="height:160px;padding:0;overflow:hidden;position:relative" data-done="1" style="background:linear-gradient(135deg,#1B2F4E,#24426B)">
+        <div class="book-cover" style="background:linear-gradient(135deg,#1B2F4E,#24426B);height:160px;padding:0;overflow:hidden;position:relative">
           <div class="book-title-on-cover">The Art of Statistics</div>
           <div class="book-author-on-cover">David Spiegelhalter</div>
         </div>
@@ -484,8 +484,8 @@
       </div>
 
       <div class="book-card" data-bcat="ai">
-        <div class="book-cover" style="background:linear-gradient(135deg,#2d1b69,#534AB7)">
-          <div class="book-title-on-cover">Prediction Machines</div>
+        <div class="book-cover" style="background:linear-gradient(135deg,#2d1b69,#534AB7);height:160px;padding:0;overflow:hidden;position:relative">
+          <img src="https://covers.openlibrary.org/b/isbn/9781633695672-M.jpg" alt="Prediction Machines" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none'">
           <div class="book-author-on-cover">Agrawal, Gans &amp; Goldfarb</div>
         </div>
         <div class="book-info">
@@ -497,8 +497,8 @@
       </div>
 
       <div class="book-card" data-bcat="leadership">
-        <div class="book-cover" style="background:linear-gradient(135deg,#166534,#1D9E75)">
-          <div class="book-title-on-cover">Thinking in Systems</div>
+        <div class="book-cover" style="background:linear-gradient(135deg,#166534,#1D9E75);height:160px;padding:0;overflow:hidden;position:relative">
+          <img src="https://covers.openlibrary.org/b/isbn/9781603580557-M.jpg" alt="Thinking in Systems" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none'">
           <div class="book-author-on-cover">Donella Meadows</div>
         </div>
         <div class="book-info">
@@ -510,8 +510,8 @@
       </div>
 
       <div class="book-card" data-bcat="strategy">
-        <div class="book-cover" style="background:linear-gradient(135deg,#7a3b1e,#C17B2F)">
-          <div class="book-title-on-cover">Good Strategy Bad Strategy</div>
+        <div class="book-cover" style="background:linear-gradient(135deg,#7a3b1e,#C17B2F);height:160px;padding:0;overflow:hidden;position:relative">
+          <img src="https://covers.openlibrary.org/b/isbn/9780307886231-M.jpg" alt="Good Strategy Bad Strategy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none'">
           <div class="book-author-on-cover">Richard Rumelt</div>
         </div>
         <div class="book-info">
@@ -523,8 +523,8 @@
       </div>
 
       <div class="book-card" data-bcat="ds">
-        <div class="book-cover" style="background:linear-gradient(135deg,#1B2F4E,#378ADD)">
-          <div class="book-title-on-cover">Naked Statistics</div>
+        <div class="book-cover" style="background:linear-gradient(135deg,#1B2F4E,#378ADD);height:160px;padding:0;overflow:hidden;position:relative">
+          <img src="https://covers.openlibrary.org/b/isbn/9780393347777-M.jpg" alt="Naked Statistics" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none'">
           <div class="book-author-on-cover">Charles Wheelan</div>
         </div>
         <div class="book-info">
@@ -536,8 +536,8 @@
       </div>
 
       <div class="book-card" data-bcat="ai">
-        <div class="book-cover" style="background:linear-gradient(135deg,#1a1a2e,#534AB7)">
-          <div class="book-title-on-cover">The Alignment Problem</div>
+        <div class="book-cover" style="background:linear-gradient(135deg,#1a1a2e,#534AB7);height:160px;padding:0;overflow:hidden;position:relative">
+          <img src="https://covers.openlibrary.org/b/isbn/9780393635782-M.jpg" alt="The Alignment Problem" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none'">
           <div class="book-author-on-cover">Brian Christian</div>
         </div>
         <div class="book-info">
@@ -549,8 +549,8 @@
       </div>
 
       <div class="book-card" data-bcat="leadership">
-        <div class="book-cover" style="background:linear-gradient(135deg,#2C2C2A,#888780)">
-          <div class="book-title-on-cover">The Manager's Path</div>
+        <div class="book-cover" style="background:linear-gradient(135deg,#2C2C2A,#888780);height:160px;padding:0;overflow:hidden;position:relative">
+          <img src="https://covers.openlibrary.org/b/isbn/9781491973899-M.jpg" alt="The Manager's Path" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none'">
           <div class="book-author-on-cover">Camille Fournier</div>
         </div>
         <div class="book-info">
@@ -562,8 +562,8 @@
       </div>
 
       <div class="book-card" data-bcat="strategy">
-        <div class="book-cover" style="background:linear-gradient(135deg,#3d1a00,#C17B2F)">
-          <div class="book-title-on-cover">Thinking, Fast and Slow</div>
+        <div class="book-cover" style="background:linear-gradient(135deg,#3d1a00,#C17B2F);height:160px;padding:0;overflow:hidden;position:relative">
+          <img src="https://covers.openlibrary.org/b/isbn/9780374533557-M.jpg" alt="Thinking, Fast and Slow" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none'">
           <div class="book-author-on-cover">Daniel Kahneman</div>
         </div>
         <div class="book-info">
@@ -583,11 +583,11 @@
   <!-- FREE DOWNLOADS -->
   <div style="padding:1.25rem 5% 1.5rem;background:var(--warm);border-bottom:0.5px solid var(--rule)">
     <div style="font-family:sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--inkl);margin-bottom:14px">Free Resources &amp; Open Access Books <span style="background:var(--green2);color:var(--green);padding:2px 8px;border-radius:2px;font-size:9px;margin-left:6px;font-weight:500">100% Free &amp; Legal</span></div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px" id="freeGrid">
+    <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px" id="freeGrid">
 
       <div class="book-card free-card" data-bcat="free">
-        <div style="background:var(--green2);border-bottom:3px solid var(--green);padding:14px;text-align:center">
-          <div style="font-size:1.8rem;margin-bottom:4px">📖</div>
+        <div style="background:#1B4E3A;border-bottom:3px solid var(--green);padding:16px 14px;text-align:center;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div style="font-size:1.8rem;margin-bottom:5px">📊</div>
           <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
         </div>
         <div class="book-info">
@@ -600,8 +600,8 @@
       </div>
 
       <div class="book-card free-card" data-bcat="free">
-        <div style="background:var(--green2);border-bottom:3px solid var(--green);padding:14px;text-align:center">
-          <div style="font-size:1.8rem;margin-bottom:4px">📖</div>
+        <div style="background:#1a1a2e;border-bottom:3px solid var(--green);padding:16px 14px;text-align:center;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div style="font-size:1.8rem;margin-bottom:5px">🧠</div>
           <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
         </div>
         <div class="book-info">
@@ -614,8 +614,8 @@
       </div>
 
       <div class="book-card free-card" data-bcat="free">
-        <div style="background:var(--green2);border-bottom:3px solid var(--green);padding:14px;text-align:center">
-          <div style="font-size:1.8rem;margin-bottom:4px">📖</div>
+        <div style="background:#1B2F4E;border-bottom:3px solid var(--green);padding:16px 14px;text-align:center;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div style="font-size:1.8rem;margin-bottom:5px">🐍</div>
           <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
         </div>
         <div class="book-info">
@@ -628,8 +628,8 @@
       </div>
 
       <div class="book-card free-card" data-bcat="free">
-        <div style="background:var(--green2);border-bottom:3px solid var(--green);padding:14px;text-align:center">
-          <div style="font-size:1.8rem;margin-bottom:4px">📖</div>
+        <div style="background:#2d1b69;border-bottom:3px solid var(--green);padding:16px 14px;text-align:center;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div style="font-size:1.8rem;margin-bottom:5px">📈</div>
           <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
         </div>
         <div class="book-info">
@@ -642,8 +642,8 @@
       </div>
 
       <div class="book-card free-card" data-bcat="free">
-        <div style="background:var(--green2);border-bottom:3px solid var(--green);padding:14px;text-align:center">
-          <div style="font-size:1.8rem;margin-bottom:4px">📖</div>
+        <div style="background:#166534;border-bottom:3px solid var(--green);padding:16px 14px;text-align:center;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div style="font-size:1.8rem;margin-bottom:5px">∑</div>
           <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
         </div>
         <div class="book-info">
@@ -656,8 +656,8 @@
       </div>
 
       <div class="book-card free-card" data-bcat="free">
-        <div style="background:var(--green2);border-bottom:3px solid var(--green);padding:14px;text-align:center">
-          <div style="font-size:1.8rem;margin-bottom:4px">📖</div>
+        <div style="background:#3d1a00;border-bottom:3px solid var(--green);padding:16px 14px;text-align:center;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div style="font-size:1.8rem;margin-bottom:5px">📉</div>
           <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
         </div>
         <div class="book-info">
@@ -693,13 +693,13 @@
     <div><div class="footer-brand-name">The Decision Signal</div><div class="footer-brand-tag">Data · AI · Decision Intelligence</div><p class="footer-brand-desc">Practical insights on ML, enterprise AI, and the craft of turning data into decisions. </p></div>
     <div class="footer-col"><h4>Content</h4><ul><li><a href="articles.html">All Articles</a></li><li><a href="articles.html">Generative AI</a></li><li><a href="articles.html">ML &amp; AI</a></li></ul></div>
     <div class="footer-col"><h4>Learn</h4><ul><li><a href="learn.html">Courses</a></li><li><a href="learn.html#masterclasses">Masterclasses</a></li><li><a href="learn.html#coaching">Coaching</a></li><li><a href="https://www.youtube.com/@knowledgesharinggroup4001" target="_blank">YouTube ↗</a></li></ul></div>
-    <div class="footer-col"><h4>Connect</h4><ul><li></li><li></li><li><a href="mailto:mukherjee.sayan17@gmail.com">Email</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li></li><li></li><li><a href="/cdn-cgi/l/email-protection#1f726a74777a6d757a7a316c7e667e712e285f78727e7673317c7072">Email</a></li></ul></div>
   </div>
   <div class="footer-bottom"><span class="footer-copy">© 2026 The Decision Signal  · Built on GitHub Pages</span></div>
 </footer>
 <div class="toast" id="toast"></div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('open')}
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4000)}
 
@@ -820,9 +820,4 @@ function freeBookPage(dir) {
   all.forEach((el,i) => { el.style.display = (i>=fbPage*FB_PER && i<(fbPage+1)*FB_PER) ? 'flex' : 'none'; });
   document.getElementById('fbPrev').disabled = fbPage===0;
   document.getElementById('fbNext').disabled = fbPage >= Math.ceil(all.length/FB_PER)-1;
-  document.getElementById('fbInfo').textContent = `Page ${fbPage+1} of ${Math.ceil(all.length/FB_PER)}`;
-}
-(function(){ freeBookPage(0); })();
-</script>
-</body>
-</html>
+  document.
