@@ -187,14 +187,8 @@
 /* ── PROFESSIONAL BOOK CARDS ────────────────────────────────────────── */
 .bk-card{display:flex;flex-direction:column;border:1px solid rgba(27,47,78,.08);border-radius:4px;overflow:hidden;transition:box-shadow .2s,transform .2s;cursor:pointer}
 .bk-card:hover{box-shadow:0 8px 24px rgba(27,47,78,.13);transform:translateY(-2px)}
-.bk-hdr{height:170px;position:relative;flex-shrink:0;overflow:hidden}
-.bk-cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:opacity .3s}
-.bk-hdr:not(.has-cover) .bk-cover-img{opacity:0}
-.bk-hdr.has-cover{background:#111}
-.bk-cover-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:12px 14px;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 60%,transparent 100%)}
-.bk-hdr-title{font-family:"Playfair Display",serif;font-size:14px;color:#fff;line-height:1.3;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-shadow:0 1px 3px rgba(0,0,0,.5)}
-.bk-hdr-author{font-size:11px;color:rgba(255,255,255,.75);text-shadow:0 1px 2px rgba(0,0,0,.4)}
-.bk-cat-pill{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.22);color:#fff;padding:3px 9px;border-radius:10px;margin-bottom:6px;width:fit-content;text-shadow:none;backdrop-filter:blur(4px)}
+.bk-hdr{height:150px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:14px 16px;position:relative;flex-shrink:0}
+.bk-cat-pill{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.18);color:rgba(255,255,255,.9);padding:3px 9px;border-radius:10px;margin-bottom:6px;width:fit-content}
 .bk-cat-pill{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.18);color:rgba(255,255,255,.9);padding:3px 9px;border-radius:10px;margin-bottom:8px;width:fit-content}
 .bk-hdr-title{font-family:'Playfair Display',serif;font-size:14px;color:#fff;line-height:1.3;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .bk-hdr-author{font-size:11px;color:rgba(255,255,255,.65)}
@@ -687,14 +681,8 @@
 
   <div class="bk-card" data-bcat="ds">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#0F2A4A,#24426B)">
-      <img src="https://covers.openlibrary.org/b/isbn/9780241258767-M.jpg" alt="The Art of Statistics" class="bk-cover-img"
-        onerror="this.style.display='none'"
-        onload="this.parentElement.classList.add('has-cover')">
-      <div class="bk-cover-overlay">
-        <div class="bk-cat-pill">Data Science</div>
-        <div class="bk-hdr-title">The Art of Statistics</div>
-      </div>
-    </div>
+      <div class="bk-cat-pill">Data Science</div>
+      <div class="bk-hdr-title">The Art of Statistics</div>
       <div class="bk-hdr-author">David Spiegelhalter</div>
     </div>
     <div class="bk-body">
@@ -707,10 +695,8 @@
 
   <div class="bk-card" data-bcat="ai">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#2d1b69,#534AB7)">
-      <img src="https://covers.openlibrary.org/b/isbn/9781633695672-M.jpg" alt="Prediction Machines" class="bk-cover-img" onerror="this.style.display='none'" onload="this.parentElement.classList.add('has-cover')">
-      <div class="bk-cover-overlay">
-        <div class="bk-cat-pill">AI &amp; ML</div>
-        <div class="bk-hdr-title">Prediction Machines</div>
+      <div class="bk-cat-pill">AI &amp; ML</div>
+      <div class="bk-hdr-title">Prediction Machines</div>
       <div class="bk-hdr-author">Agrawal, Gans &amp; Goldfarb</div>
     </div>
     <div class="bk-body">
@@ -723,14 +709,8 @@
 
   <div class="bk-card" data-bcat="leadership">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#0d4d2e,#166534)">
-      <img src="https://covers.openlibrary.org/b/isbn/9781603580557-M.jpg" alt="Thinking in Systems" class="bk-cover-img"
-        onerror="this.style.display='none'"
-        onload="this.parentElement.classList.add('has-cover')">
-      <div class="bk-cover-overlay">
-        <div class="bk-cat-pill">Leadership</div>
-        <div class="bk-hdr-title">Thinking in Systems</div>
-      </div>
-    </div>
+      <div class="bk-cat-pill">Leadership</div>
+      <div class="bk-hdr-title">Thinking in Systems</div>
       <div class="bk-hdr-author">Donella Meadows</div>
     </div>
     <div class="bk-body">
@@ -743,14 +723,8 @@
 
   <div class="bk-card" data-bcat="strategy">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#7a3b1e,#C17B2F)">
-      <img src="https://covers.openlibrary.org/b/isbn/9780307886231-M.jpg" alt="Good Strategy Bad Strategy" class="bk-cover-img"
-        onerror="this.style.display='none'"
-        onload="this.parentElement.classList.add('has-cover')">
-      <div class="bk-cover-overlay">
-        <div class="bk-cat-pill">Strategy</div>
-        <div class="bk-hdr-title">Good Strategy Bad Strategy</div>
-      </div>
-    </div>
+      <div class="bk-cat-pill">Strategy</div>
+      <div class="bk-hdr-title">Good Strategy Bad Strategy</div>
       <div class="bk-hdr-author">Richard Rumelt</div>
     </div>
     <div class="bk-body">
@@ -763,14 +737,8 @@
 
   <div class="bk-card" data-bcat="ds">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#1B2F4E,#378ADD)">
-      <img src="https://covers.openlibrary.org/b/isbn/9780393347777-M.jpg" alt="Naked Statistics" class="bk-cover-img"
-        onerror="this.style.display='none'"
-        onload="this.parentElement.classList.add('has-cover')">
-      <div class="bk-cover-overlay">
-        <div class="bk-cat-pill">Data Science</div>
-        <div class="bk-hdr-title">Naked Statistics</div>
-      </div>
-    </div>
+      <div class="bk-cat-pill">Data Science</div>
+      <div class="bk-hdr-title">Naked Statistics</div>
       <div class="bk-hdr-author">Charles Wheelan</div>
     </div>
     <div class="bk-body">
@@ -783,10 +751,8 @@
 
   <div class="bk-card" data-bcat="ai">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#1a1a2e,#4a47a3)">
-      <img src="https://covers.openlibrary.org/b/isbn/9780393635782-M.jpg" alt="The Alignment Problem" class="bk-cover-img" onerror="this.style.display='none'" onload="this.parentElement.classList.add('has-cover')">
-      <div class="bk-cover-overlay">
-        <div class="bk-cat-pill">AI &amp; ML</div>
-        <div class="bk-hdr-title">The Alignment Problem</div>
+      <div class="bk-cat-pill">AI &amp; ML</div>
+      <div class="bk-hdr-title">The Alignment Problem</div>
       <div class="bk-hdr-author">Brian Christian</div>
     </div>
     <div class="bk-body">
@@ -799,14 +765,8 @@
 
   <div class="bk-card" data-bcat="leadership">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#2C2C2A,#5a5a56)">
-      <img src="https://covers.openlibrary.org/b/isbn/9781491973899-M.jpg" alt="The Manager's Path" class="bk-cover-img"
-        onerror="this.style.display='none'"
-        onload="this.parentElement.classList.add('has-cover')">
-      <div class="bk-cover-overlay">
-        <div class="bk-cat-pill">Leadership</div>
-        <div class="bk-hdr-title">The Manager's Path</div>
-      </div>
-    </div>
+      <div class="bk-cat-pill">Leadership</div>
+      <div class="bk-hdr-title">The Manager's Path</div>
       <div class="bk-hdr-author">Camille Fournier</div>
     </div>
     <div class="bk-body">
@@ -819,14 +779,8 @@
 
   <div class="bk-card" data-bcat="strategy">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#3d1a00,#a85f1a)">
-      <img src="https://covers.openlibrary.org/b/isbn/9780374533557-M.jpg" alt="Thinking, Fast and Slow" class="bk-cover-img"
-        onerror="this.style.display='none'"
-        onload="this.parentElement.classList.add('has-cover')">
-      <div class="bk-cover-overlay">
-        <div class="bk-cat-pill">Strategy</div>
-        <div class="bk-hdr-title">Thinking, Fast and Slow</div>
-      </div>
-    </div>
+      <div class="bk-cat-pill">Strategy</div>
+      <div class="bk-hdr-title">Thinking, Fast and Slow</div>
       <div class="bk-hdr-author">Daniel Kahneman</div>
     </div>
     <div class="bk-body">
@@ -838,6 +792,9 @@
   </div>
 
 </div>
+    <div style="font-family:sans-serif;font-size:11px;color:var(--inkl);margin-top:14px;padding-top:10px;border-top:0.5px solid var(--rule)">
+      As an Amazon Associate, purchases through these links support this site at no extra cost to you. Replace <code>YOUR-AFFILIATE-ID</code> with your Amazon Associates tag once approved.
+    </div>
     <div style="font-family:sans-serif;font-size:11px;color:var(--inkl);margin-top:14px;padding-top:10px;border-top:0.5px solid var(--rule)">
       As an Amazon Associate, purchases through these links support this site at no extra cost to you. Replace <code>YOUR-AFFILIATE-ID</code> with your Amazon Associates tag once approved.
     </div>
