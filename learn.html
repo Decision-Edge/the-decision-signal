@@ -505,12 +505,12 @@
 
 <div class="always-section" id="sec-coaching">
   <div class="vid-section-hdr" style="padding:2rem 5% 0">
-    <div class="vid-section-title">1-to-1 Coaching &amp; Mentorship</div>
+    <div class="vid-section-title">Book a Session</div>
   </div>
   <div class="coaching-wrap">
     <div class="coaching-left">
-      <h2 style="font-size:clamp(20px,2.5vw,28px);color:var(--sl);margin-bottom:10px">Book a Free Session</h2>
-      <p class="coaching-intro">Connect with industry experts for free mentorship, career guidance, and technical coaching. Whether you're navigating a career decision, tackling a complex AI problem, or building your data science roadmap — book a slot and get focused, practical guidance.</p>
+      <h2 style="font-size:clamp(20px,2.5vw,28px);color:var(--sl);margin-bottom:10px">Book a Session</h2>
+      <p class="coaching-intro">Book a focused session with an industry expert. Career Mentorship is free. For Technical Deep-Dives, AI Strategy Advisory and Ongoing Mentorship, submit a booking request and pricing details will be shared with you directly.</p>
       <div class="session-types" id="sessionTypes">
 
   <div class="session-card" id="sc-career">
@@ -544,7 +544,7 @@
       </div>
       <div style="display:flex;align-items:center;gap:14px;flex-shrink:0">
         <div style="text-align:right">
-          <div class="session-price" style="color:var(--green)">Free</div>
+          <div class="session-price" style="color:var(--inkm);font-size:11px">Request Booking</div>
           <div class="session-duration">60 min · Zoom</div>
         </div>
         <svg class="session-card-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;transition:transform .25s;color:var(--inkl)"><path d="M6 9l6 6 6-6"/></svg>
@@ -567,7 +567,7 @@
       </div>
       <div style="display:flex;align-items:center;gap:14px;flex-shrink:0">
         <div style="text-align:right">
-          <div class="session-price" style="color:var(--green)">Free</div>
+          <div class="session-price" style="color:var(--inkm);font-size:11px">Request Booking</div>
           <div class="session-duration">90 min · Zoom</div>
         </div>
         <svg class="session-card-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;transition:transform .25s;color:var(--inkl)"><path d="M6 9l6 6 6-6"/></svg>
@@ -590,7 +590,7 @@
       </div>
       <div style="display:flex;align-items:center;gap:14px;flex-shrink:0">
         <div style="text-align:right">
-          <div class="session-price" style="color:var(--green)">Free</div>
+          <div class="session-price" style="color:var(--inkm);font-size:11px">Request Booking</div>
           <div class="session-duration">Monthly · Ongoing</div>
         </div>
         <svg class="session-card-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;transition:transform .25s;color:var(--inkl)"><path d="M6 9l6 6 6-6"/></svg>
@@ -608,35 +608,50 @@
 </div>
     </div>
     <div class="coaching-right">
-      <div class="booking-title">Request a Booking</div>
-      <form class="booking-form" id="bookingForm" onsubmit="submitBooking(event)">
+      <div class="booking-title">Book a Session</div>
+      <p style="font-size:12.5px;color:var(--inkl);line-height:1.7;margin-bottom:1.25rem">Fill in your details and preferred slot. You will receive a confirmation email, and we will get back to you within 24 hours to confirm.</p>
+      <form class="booking-form" id="bookingForm"
+        action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+        method="POST">
+
+        <!-- Hidden fields so Formspree sends copy to submitter -->
+        <input type="hidden" name="_subject" value="New Session Booking — The Decision Signal">
+        <input type="hidden" name="_cc" value="">
+        <input type="hidden" name="_next" value="">
+        <input type="hidden" name="_replyto" value="">
+
         <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" id="bookName" class="form-input" placeholder="Full name" required>
+          <label>Your Name <span style="color:#dc2626">*</span></label>
+          <input type="text" name="name" id="bookName" class="form-input" placeholder="Full name" required>
         </div>
         <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" id="bookEmail" class="form-input" placeholder="your@email.com" required>
+          <label>Email Address <span style="color:#dc2626">*</span></label>
+          <input type="email" name="email" id="bookEmail" class="form-input" placeholder="your@email.com" required>
         </div>
         <div class="form-group">
-          <label>Session Type</label>
-          <select id="bookSession" class="form-select form-input" required>
+          <label>Phone Number <span style="color:#dc2626">*</span></label>
+          <input type="tel" name="phone" id="bookPhone" class="form-input" placeholder="+91 98765 43210" required
+            pattern="[+]?[0-9\s\-]{8,15}" title="Please enter a valid phone number">
+        </div>
+        <div class="form-group">
+          <label>Session Type <span style="color:#dc2626">*</span></label>
+          <select name="session_type" id="bookSession" class="form-select form-input" required>
             <option value="">Select a session type</option>
-            <option>Career Mentorship Session — 45 min</option>
-            <option>Technical Deep-Dive — 60 min</option>
-            <option>AI Strategy Advisory — 90 min</option>
-            <option>Ongoing Mentorship — Monthly</option>
+            <option value="Career Mentorship Session — Free · 45 min">Career Mentorship Session — Free · 45 min</option>
+            <option value="Technical Deep-Dive — Request Booking for Price Details · 60 min">Technical Deep-Dive — Request Booking for Price Details · 60 min</option>
+            <option value="AI Strategy Advisory — Request Booking for Price Details · 90 min">AI Strategy Advisory — Request Booking for Price Details · 90 min</option>
+            <option value="Ongoing Mentorship — Request Booking for Price Details · Monthly">Ongoing Mentorship — Request Booking for Price Details · Monthly</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Preferred Date</label>
-          <input type="date" id="bookDate" class="form-input" placeholder="Select a weekend date"
+          <label>Preferred Date <span style="color:#dc2626">*</span></label>
+          <input type="date" name="preferred_date" id="bookDate" class="form-input"
             min="" oninput="validateWeekend(this);updateTimeSlots()" required>
           <div id="dateMsg" style="font-size:11.5px;color:#dc2626;margin-top:4px;display:none">Please select a Saturday or Sunday.</div>
         </div>
         <div class="form-group" id="timeslotGroup" style="display:none">
-          <label>Preferred Time Slot <span style="color:var(--inkl);font-weight:400">(IST)</span></label>
-          <select id="bookTime" class="form-select form-input" required>
+          <label>Preferred Time Slot <span style="color:var(--inkl);font-weight:400">(IST)</span> <span style="color:#dc2626">*</span></label>
+          <select name="time_slot" id="bookTime" class="form-select form-input" required>
             <option value="">Select a time slot</option>
             <option>9:00 AM – 9:45 AM IST</option>
             <option>10:00 AM – 10:45 AM IST</option>
@@ -649,18 +664,18 @@
           </select>
         </div>
         <div class="form-group">
-          <label>What would you like to work on?</label>
-          <textarea id="bookDesc" class="form-textarea" placeholder="Brief description of your goals or the problem you'd like to discuss..." required></textarea>
+          <label>What would you like to work on? <span style="color:#dc2626">*</span></label>
+          <textarea name="message" id="bookDesc" class="form-textarea"
+            placeholder="Brief description of your goals or the problem you would like to discuss..." required></textarea>
         </div>
-        <button type="submit" class="booking-btn">Request Booking →</button>
-        <div class="booking-note">You'll receive a confirmation email within 24 hrs · All sessions via Zoom · Currently free</div>
+        <button type="submit" class="booking-btn">Confirm Booking Request →</button>
+        <div class="booking-note">
+          A confirmation email will be sent to you · Sayan will confirm within 24 hrs · All sessions via Zoom
+        </div>
       </form>
     </div>
   </div>
-</div>
-
-<!-- LIBRARY -->
-<div class="always-section" id="sec-library">
+</div>ec-library">
   <div class="vid-section-hdr" style="padding:2rem 5% 0">
     <div class="vid-section-title">Library — Books &amp; Free Resources</div>
   </div>
@@ -946,7 +961,7 @@
         <p class="cta-slide-desc">Career guidance, technical deep-dives &amp; AI strategy advisory with industry experts. Book a free slot.</p>
       </div>
       <div class="cta-slide-right">
-        <a href="learn.html#coaching" class="cta-pill cta-pill-amber">
+        <a href="javascript:void(0)" onclick="scrollToSection('sec-coaching')" class="cta-pill cta-pill-amber">
           Book a Session
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -972,7 +987,7 @@
         <p class="cta-slide-desc">Live Zoom sessions on AI strategy, ML in production, and decision intelligence. Free to attend.</p>
       </div>
       <div class="cta-slide-right">
-        <a href="learn.html#masterclasses" class="cta-pill cta-pill-dark">
+        <a href="javascript:void(0)" onclick="scrollToSection('sec-masterclasses')" class="cta-pill cta-pill-dark">
           View Events
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
