@@ -64,15 +64,15 @@
 .vc-count{font-family:'DM Sans',sans-serif;font-size:10.5px;color:var(--inkl)}
 .vc-free{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;color:var(--green)}
 
-/* ── ARTICLE CATEGORY SECTION (like articles.html) ───────────────────── */
+
 .home-art-section{padding:0 5% 2rem;border-bottom:0.5px solid var(--rule);background:#fff}
-.art-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
-.art-card-v2{display:flex;flex-direction:column;border-radius:4px;overflow:hidden;border:1px solid rgba(27,47,78,.08);transition:box-shadow .2s,transform .2s;text-decoration:none}
-.art-card-v2:hover{box-shadow:0 8px 24px rgba(27,47,78,.12);transform:translateY(-2px)}
-.art-card-v2-hdr{height:130px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:12px 14px;flex-shrink:0}
+
+
+
+
 .art-src-pill{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.18);color:rgba(255,255,255,.9);padding:2px 8px;border-radius:10px;margin-bottom:6px;width:fit-content}
 .art-hdr-title{font-family:'Playfair Display',serif;font-size:12.5px;color:#fff;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.art-card-v2-body{padding:12px 14px;flex:1;display:flex;flex-direction:column;background:#fff}
+
 .art-cat-label{font-family:'DM Sans',sans-serif;font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:5px}
 .art-body-title{font-family:'Playfair Display',serif;font-size:13px;color:var(--ink);line-height:1.35;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:8px}
 .art-body-foot{display:flex;align-items:center;justify-content:space-between;padding-top:8px;border-top:0.5px solid var(--rule);margin-top:auto;gap:4px}
@@ -86,9 +86,9 @@
 .stars5 .se{width:10px;height:10px;fill:#d1d7dc}
 
 /* ── RESPONSIVE ──────────────────────────────────────────────────────── */
-@media(max-width:1100px){.vid-row,.art-row{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.vid-row,.art-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:500px){.vid-row,.art-row{grid-template-columns:1fr}}
+@media(max-width:1100px){.vid-row,}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.vid-row,}
+@media(max-width:500px){.vid-row,}
 </style>
 </head>
 <body>
@@ -167,99 +167,103 @@
 </section>
 
 <!-- ── STICKY CATEGORY NAV ───────────────────────────────────────────────── -->
+<!-- STICKY CATEGORY NAV -->
 <nav class="home-cat-nav" id="homeCatNav">
-  <button class="hc-tab active" data-sec="sec-vid-ml">ML &amp; AI Videos</button>
-  <button class="hc-tab" data-sec="sec-vid-career">Career Videos</button>
-  <button class="hc-tab" data-sec="sec-art-ml">ML &amp; AI Articles</button>
-  <button class="hc-tab" data-sec="sec-art-genai">GenAI Articles</button>
-  <button class="hc-tab" data-sec="sec-art-leadership">Leadership Articles</button>
-  <button class="hc-tab" data-sec="sec-art-exp">Experimentation</button>
-  <button class="hc-tab" data-sec="sec-art-career">Career Articles</button>
+  <button class="hc-tab active" data-sec="sec-vid-ml">ML &amp; AI</button>
+  <button class="hc-tab" data-sec="sec-vid-career">Career</button>
+  <button class="hc-tab" data-sec="sec-vid-decision">Decision Science</button>
+  <button class="hc-tab" data-sec="sec-vid-genai">Generative AI</button>
+  <button class="hc-tab" data-sec="sec-vid-tools">Tools &amp; Python</button>
 </nav>
 
-<!-- ════════════════════════════════════════════════════════════════════════
-     VIDEOS — ML & AI
-     ════════════════════════════════════════════════════════════════════════ -->
 <div id="sec-vid-ml">
   <div class="home-sec-hdr">
-    <div class="home-sec-title">ML &amp; AI Videos</div>
+    <div class="home-sec-title">ML &amp; AI</div>
     <a href="learn.html#sec-ml" class="view-all-btn">View All <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
   </div>
   <div class="home-vid-section">
     <div class="vid-row">
-
       <a href="https://youtu.be/LJyyJOzxlcA" target="_blank" class="vc">
-        <div class="vc-thumb"><iframe src="https://www.youtube.com/embed/LJyyJOzxlcA" title="Data Science in 1 Hour" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">1:00:00</span></div>
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/LJyyJOzxlcA" title="A Complete Understanding of Data Science in 1 Hour" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">1:00:00</span>
+        </div>
         <div class="vc-body">
-          <div class="vc-badge">ML &amp; AI · Free</div>
+          <div class="vc-badge">ML & AI · Free</div>
           <div class="vc-title">A Complete Understanding of Data Science in 1 Hour</div>
           <div class="vc-instructor">Knowledge Sharing Group</div>
-          <div class="vc-stars"><span class="vc-rating">4.8</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(1.2k)</span></div>
+          <div class="vc-stars"><span class="vc-rating">4.8</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(1.2k)</span></div>
           <div class="vc-free">Free on YouTube</div>
         </div>
       </a>
-
       <a href="https://youtu.be/eV4UzdER5d4" target="_blank" class="vc">
-        <div class="vc-thumb"><iframe src="https://www.youtube.com/embed/eV4UzdER5d4" title="Why Trust DS Models" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="vc-thumb-overlay"><div class="vc-play"></div></div></div>
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/eV4UzdER5d4" title="Why Trust Insights from Data Science Models?" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div>
+        </div>
         <div class="vc-body">
-          <div class="vc-badge">ML &amp; AI · Free</div>
+          <div class="vc-badge">ML & AI · Free</div>
           <div class="vc-title">Why Trust Insights from Data Science Models?</div>
           <div class="vc-instructor">Knowledge Sharing Group</div>
           <div class="vc-stars"><span class="vc-rating">4.7</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(854)</span></div>
           <div class="vc-free">Free on YouTube</div>
         </div>
       </a>
-
       <a href="https://youtu.be/JkUO-jaNdF4" target="_blank" class="vc">
-        <div class="vc-thumb"><iframe src="https://www.youtube.com/embed/JkUO-jaNdF4" title="DS vs DM vs Analytics" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">13:24</span></div>
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/JkUO-jaNdF4" title="Data Science vs. Data Mining vs. Analytics" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">13:24</span>
+        </div>
         <div class="vc-body">
-          <div class="vc-badge">ML &amp; AI · Free</div>
-          <div class="vc-title">Data Science vs. Data Mining vs. Analytics — Explained</div>
+          <div class="vc-badge">ML & AI · Free</div>
+          <div class="vc-title">Data Science vs. Data Mining vs. Analytics</div>
           <div class="vc-instructor">Knowledge Sharing Group</div>
           <div class="vc-stars"><span class="vc-rating">4.6</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(632)</span></div>
           <div class="vc-free">Free on YouTube</div>
         </div>
       </a>
-
       <a href="https://youtu.be/Gv9_4yMHFhI" target="_blank" class="vc">
-        <div class="vc-thumb"><iframe src="https://www.youtube.com/embed/Gv9_4yMHFhI" title="Decision Trees" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">17:32</span></div>
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/Gv9_4yMHFhI" title="Decision Trees — Clearly Explained" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">17:32</span>
+        </div>
         <div class="vc-body">
-          <div class="vc-badge">ML &amp; AI · Free</div>
-          <div class="vc-title">Decision Trees — Clearly Explained (StatQuest)</div>
-          <div class="vc-instructor">StatQuest with Josh Starmer</div>
+          <div class="vc-badge">ML & AI · Free</div>
+          <div class="vc-title">Decision Trees — Clearly Explained</div>
+          <div class="vc-instructor">StatQuest</div>
           <div class="vc-stars"><span class="vc-rating">4.9</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(3.1k)</span></div>
           <div class="vc-free">Free on YouTube</div>
         </div>
       </a>
-
       <a href="https://youtu.be/aircAruvnKk" target="_blank" class="vc">
-        <div class="vc-thumb"><iframe src="https://www.youtube.com/embed/aircAruvnKk" title="Neural Networks 3B1B" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">19:13</span></div>
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/aircAruvnKk" title="But What Is a Neural Network?" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">19:13</span>
+        </div>
         <div class="vc-body">
-          <div class="vc-badge">ML &amp; AI · Free</div>
-          <div class="vc-title">But What Is a Neural Network? (3Blue1Brown)</div>
+          <div class="vc-badge">ML & AI · Free</div>
+          <div class="vc-title">But What Is a Neural Network?</div>
           <div class="vc-instructor">3Blue1Brown</div>
           <div class="vc-stars"><span class="vc-rating">4.9</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(5.2k)</span></div>
           <div class="vc-free">Free on YouTube</div>
         </div>
       </a>
-
     </div>
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════════════════════
-     VIDEOS — CAREER
-     ════════════════════════════════════════════════════════════════════════ -->
 <div id="sec-vid-career">
   <div class="home-sec-hdr">
-    <div class="home-sec-title">Career &amp; Roadmap Videos</div>
+    <div class="home-sec-title">Career &amp; Roadmap</div>
     <a href="learn.html#sec-career" class="view-all-btn">View All <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
   </div>
   <div class="home-vid-section">
     <div class="vid-row">
-
       <a href="https://youtu.be/uuearKdgG-A" target="_blank" class="vc">
-        <div class="vc-thumb"><iframe src="https://www.youtube.com/embed/uuearKdgG-A" title="DS Roadmap" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="vc-thumb-overlay"><div class="vc-play"></div></div></div>
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/uuearKdgG-A" title="Roadmap To Become A Data Science Professional" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div>
+        </div>
         <div class="vc-body">
           <div class="vc-badge">Career · Free</div>
           <div class="vc-title">Roadmap To Become A Data Science Professional</div>
@@ -268,9 +272,11 @@
           <div class="vc-free">Free on YouTube</div>
         </div>
       </a>
-
       <a href="https://youtu.be/RBSUwFGa6Fk" target="_blank" class="vc">
-        <div class="vc-thumb"><iframe src="https://www.youtube.com/embed/RBSUwFGa6Fk" title="DS Interview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="vc-thumb-overlay"><div class="vc-play"></div></div></div>
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/RBSUwFGa6Fk" title="Data Science Interview Questions — How to Prepare" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div>
+        </div>
         <div class="vc-body">
           <div class="vc-badge">Career · Free</div>
           <div class="vc-title">Data Science Interview Questions — How to Prepare</div>
@@ -279,20 +285,24 @@
           <div class="vc-free">Free on YouTube</div>
         </div>
       </a>
-
       <a href="https://youtu.be/N6BghzjFc9c" target="_blank" class="vc">
-        <div class="vc-thumb"><iframe src="https://www.youtube.com/embed/N6BghzjFc9c" title="DS Portfolio" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="vc-thumb-overlay"><div class="vc-play"></div></div></div>
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/N6BghzjFc9c" title="Build a Data Science Portfolio That Gets You Hired" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div>
+        </div>
         <div class="vc-body">
           <div class="vc-badge">Career · Free</div>
           <div class="vc-title">Build a Data Science Portfolio That Gets You Hired</div>
           <div class="vc-instructor">Ken Jee</div>
-          <div class="vc-stars"><span class="vc-rating">4.6</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(548)</span></div>
+          <div class="vc-stars"><span class="vc-rating">4.7</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(548)</span></div>
           <div class="vc-free">Free on YouTube</div>
         </div>
       </a>
-
       <a href="https://youtu.be/ua-CiDNNj30" target="_blank" class="vc">
-        <div class="vc-thumb"><iframe src="https://www.youtube.com/embed/ua-CiDNNj30" title="DS Skills" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="vc-thumb-overlay"><div class="vc-play"></div></div></div>
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/ua-CiDNNj30" title="Top Skills Every Data Scientist Needs in 2025" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div>
+        </div>
         <div class="vc-body">
           <div class="vc-badge">Career · Free</div>
           <div class="vc-title">Top Skills Every Data Scientist Needs in 2025</div>
@@ -301,9 +311,11 @@
           <div class="vc-free">Free on YouTube</div>
         </div>
       </a>
-
       <a href="https://youtu.be/zAULhNrnuL4" target="_blank" class="vc">
-        <div class="vc-thumb"><iframe src="https://www.youtube.com/embed/zAULhNrnuL4" title="DS Salary" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="vc-thumb-overlay"><div class="vc-play"></div></div></div>
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/zAULhNrnuL4" title="Data Science Salaries — What to Expect at Each Level" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div>
+        </div>
         <div class="vc-body">
           <div class="vc-badge">Career · Free</div>
           <div class="vc-title">Data Science Salaries — What to Expect at Each Level</div>
@@ -312,174 +324,239 @@
           <div class="vc-free">Free on YouTube</div>
         </div>
       </a>
-
     </div>
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════════════════════
-     ARTICLES — ML & AI
-     ════════════════════════════════════════════════════════════════════════ -->
-<div id="sec-art-ml">
+<div id="sec-vid-decision">
   <div class="home-sec-hdr">
-    <div class="home-sec-title">ML &amp; AI Articles</div>
-    <a href="articles.html#sec-ml" class="view-all-btn">View All <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <div class="home-sec-title">Decision Science</div>
+    <a href="learn.html#sec-decision" class="view-all-btn">View All <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
   </div>
-  <div class="home-art-section">
-    <div class="art-row">
-      <a href="https://www.forbes.com/sites/startswithabang/2018/02/13/chaos-theory-the-butterfly-effect-and-the-computer-glitch-that-started-it-all/" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#003366,#185FA5)"><span class="art-src-pill">Forbes</span><div class="art-hdr-title">Chaos Theory, the Butterfly Effect and the Computer Glitch That Started It All</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">ML &amp; AI</div><div class="art-body-title">Chaos Theory, the Butterfly Effect and the Computer Glitch That Started It All</div><div class="art-body-foot"><span class="art-body-meta">Forbes · 2018</span><span class="art-body-link">Read →</span></div></div>
+  <div class="home-vid-section">
+    <div class="vid-row">
+      <a href="https://youtu.be/AHSPuG45kjU" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/AHSPuG45kjU" title="How to Make Better Decisions Using Data" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Decision Science · Free</div>
+          <div class="vc-title">How to Make Better Decisions Using Data</div>
+          <div class="vc-instructor">TED-Ed</div>
+          <div class="vc-stars"><span class="vc-rating">4.8</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(1.8k)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
-      <a href="https://towardsdatascience.com/the-economics-of-machine-learning-in-production-dc0b8d03c28a" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#0F6E56,#1D9E75)"><span class="art-src-pill">Towards Data Science</span><div class="art-hdr-title">The Economics of Machine Learning in Production</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">ML &amp; AI</div><div class="art-body-title">The Economics of Machine Learning in Production</div><div class="art-body-foot"><span class="art-body-meta">TDS</span><span class="art-body-link">Read →</span></div></div>
+      <a href="https://youtu.be/8eRx5Wo3xYA" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/8eRx5Wo3xYA" title="Causal Inference — Correlation vs Causation" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Decision Science · Free</div>
+          <div class="vc-title">Causal Inference — Correlation vs Causation</div>
+          <div class="vc-instructor">StatQuest</div>
+          <div class="vc-stars"><span class="vc-rating">4.9</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(2.4k)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
-      <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-data-driven-enterprise-of-2025" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#1a1a2e,#534AB7)"><span class="art-src-pill">McKinsey</span><div class="art-hdr-title">The Data-Driven Enterprise: What It Actually Takes</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">ML &amp; AI</div><div class="art-body-title">The Data-Driven Enterprise: What It Actually Takes</div><div class="art-body-foot"><span class="art-body-meta">McKinsey</span><span class="art-body-link">Read →</span></div></div>
+      <a href="https://youtu.be/PNtKXWNKGN8" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/PNtKXWNKGN8" title="A/B Testing — How to Run Experiments Properly" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Decision Science · Free</div>
+          <div class="vc-title">A/B Testing — How to Run Experiments Properly</div>
+          <div class="vc-instructor">Alex The Analyst</div>
+          <div class="vc-stars"><span class="vc-rating">4.7</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(988)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
-      <a href="https://www.technologyreview.com/2023/06/06/1074001/the-real-risks-of-artificial-intelligence/" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#2d1b69,#7F77DD)"><span class="art-src-pill">MIT Tech Review</span><div class="art-hdr-title">The Real Risk of AI Is Not What You Think</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">ML &amp; AI</div><div class="art-body-title">The Real Risk of AI Is Not What You Think</div><div class="art-body-foot"><span class="art-body-meta">MIT Tech Review</span><span class="art-body-link">Read →</span></div></div>
+      <a href="https://youtu.be/KbB0YvR72jQ" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/KbB0YvR72jQ" title="Bayesian Thinking for Better Decisions" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Decision Science · Free</div>
+          <div class="vc-title">Bayesian Thinking for Better Decisions</div>
+          <div class="vc-instructor">3Blue1Brown</div>
+          <div class="vc-stars"><span class="vc-rating">4.9</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(3.3k)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
-      <a href="https://hbr.org/2019/02/how-to-use-data-to-make-better-decisions" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#14532d,#166534)"><span class="art-src-pill">Harvard Business Review</span><div class="art-hdr-title">How to Use Data to Make Better Decisions Faster</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">ML &amp; AI</div><div class="art-body-title">How to Use Data to Make Better Decisions Faster</div><div class="art-body-foot"><span class="art-body-meta">HBR</span><span class="art-body-link">Read →</span></div></div>
+      <a href="https://youtu.be/7avdFPCDFhc" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/7avdFPCDFhc" title="Business Analytics — From Data to Strategy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Decision Science · Free</div>
+          <div class="vc-title">Business Analytics — From Data to Strategy</div>
+          <div class="vc-instructor">MIT OpenCourseWare</div>
+          <div class="vc-stars"><span class="vc-rating">4.6</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(741)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
     </div>
   </div>
 </div>
 
-<!-- ARTICLES — GENAI -->
-<div id="sec-art-genai">
+<div id="sec-vid-genai">
   <div class="home-sec-hdr">
-    <div class="home-sec-title">Generative AI Articles</div>
-    <a href="articles.html#sec-genai" class="view-all-btn">View All <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <div class="home-sec-title">Generative AI</div>
+    <a href="learn.html" class="view-all-btn">View All <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
   </div>
-  <div class="home-art-section">
-    <div class="art-row">
-      <a href="https://openai.com/research/gpt-4" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#1a1a2e,#7F77DD)"><span class="art-src-pill">OpenAI</span><div class="art-hdr-title">What GPT-4 Means for Enterprise AI Strategy</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Generative AI</div><div class="art-body-title">Introducing GPT-4 and What It Means for Enterprise AI</div><div class="art-body-foot"><span class="art-body-meta">OpenAI</span><span class="art-body-link">Read →</span></div></div>
+  <div class="home-vid-section">
+    <div class="vid-row">
+      <a href="https://youtu.be/WXuK6gekU1Y" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/WXuK6gekU1Y" title="Introduction to Large Language Models" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">42:00</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Generative AI · Free</div>
+          <div class="vc-title">Introduction to Large Language Models</div>
+          <div class="vc-instructor">Google TechTalks</div>
+          <div class="vc-stars"><span class="vc-rating">4.8</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(2.1k)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
-      <a href="https://hbr.org/2023/07/how-to-use-generative-ai-as-a-thought-partner" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#3d1a6e,#9B59B6)"><span class="art-src-pill">HBR</span><div class="art-hdr-title">How to Actually Use Generative AI in Your Business</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Generative AI</div><div class="art-body-title">How to Actually Use Generative AI in Your Business</div><div class="art-body-foot"><span class="art-body-meta">Harvard Business Review</span><span class="art-body-link">Read →</span></div></div>
+      <a href="https://youtu.be/zizonToFXDs" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/zizonToFXDs" title="How ChatGPT Works — the Technical Details" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">1:01:00</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Generative AI · Free</div>
+          <div class="vc-title">How ChatGPT Works — the Technical Details</div>
+          <div class="vc-instructor">Andrej Karpathy</div>
+          <div class="vc-stars"><span class="vc-rating">4.9</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(4.8k)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
-      <a href="https://deepmind.google/research/" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#1e3a5f,#2E86C1)"><span class="art-src-pill">DeepMind</span><div class="art-hdr-title">From Research to Reality: Deploying Foundation Models</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Generative AI</div><div class="art-body-title">From Research to Reality: Deploying Foundation Models</div><div class="art-body-foot"><span class="art-body-meta">DeepMind</span><span class="art-body-link">Read →</span></div></div>
+      <a href="https://youtu.be/bZQun8Y4L2A" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/bZQun8Y4L2A" title="Transformers Explained Visually" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">20:17</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Generative AI · Free</div>
+          <div class="vc-title">Transformers Explained Visually</div>
+          <div class="vc-instructor">Yannic Kilcher</div>
+          <div class="vc-stars"><span class="vc-rating">4.8</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(1.9k)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
-      <a href="https://towardsdatascience.com" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#2d1b69,#C17B2F)"><span class="art-src-pill">Towards Data Science</span><div class="art-hdr-title">Building RAG Pipelines That Actually Work in Production</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Generative AI</div><div class="art-body-title">Building RAG Pipelines That Actually Work in Production</div><div class="art-body-foot"><span class="art-body-meta">TDS</span><span class="art-body-link">Read →</span></div></div>
+      <a href="https://youtu.be/ArnVbF4S3kA" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/ArnVbF4S3kA" title="Prompt Engineering in 10 Minutes" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">10:45</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Generative AI · Free</div>
+          <div class="vc-title">Prompt Engineering in 10 Minutes</div>
+          <div class="vc-instructor">Matt Wolfe</div>
+          <div class="vc-stars"><span class="vc-rating">4.6</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(1.1k)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
-      <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#0d2137,#1B4F72)"><span class="art-src-pill">McKinsey</span><div class="art-hdr-title">The State of Generative AI in the Enterprise 2024</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Generative AI</div><div class="art-body-title">The State of Generative AI in the Enterprise</div><div class="art-body-foot"><span class="art-body-meta">McKinsey</span><span class="art-body-link">Read →</span></div></div>
+      <a href="https://youtu.be/9uw3F6rNd8U" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/9uw3F6rNd8U" title="RAG Explained — Retrieval Augmented Generation" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">13:21</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Generative AI · Free</div>
+          <div class="vc-title">RAG Explained — Retrieval Augmented Generation</div>
+          <div class="vc-instructor">IBM Technology</div>
+          <div class="vc-stars"><span class="vc-rating">4.7</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(1.4k)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
     </div>
   </div>
 </div>
 
-<!-- ARTICLES — LEADERSHIP -->
-<div id="sec-art-leadership">
+<div id="sec-vid-tools">
   <div class="home-sec-hdr">
-    <div class="home-sec-title">Leadership Articles</div>
-    <a href="articles.html#sec-leadership" class="view-all-btn">View All <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <div class="home-sec-title">Tools &amp; Python</div>
+    <a href="learn.html" class="view-all-btn">View All <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
   </div>
-  <div class="home-art-section">
-    <div class="art-row">
-      <a href="https://smukherjee04.medium.com/what-project-managers-need-to-know-about-pre-mortems-bcb35c04848e" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#1B2F4E,#24426B)"><span class="art-src-pill">Medium</span><div class="art-hdr-title">What Project Managers Need To Know About Pre-Mortems</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Leadership</div><div class="art-body-title">What Project Managers Need To Know About Pre-Mortems</div><div class="art-body-foot"><span class="art-body-meta">Medium · Dec 2020</span><span class="art-body-link">Read →</span></div></div>
+  <div class="home-vid-section">
+    <div class="vid-row">
+      <a href="https://youtu.be/rfscVS0vtbw" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" title="Learn Python in 4 Hours — Full Course" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">4:26:00</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Tools & Python · Free</div>
+          <div class="vc-title">Learn Python in 4 Hours — Full Course</div>
+          <div class="vc-instructor">freeCodeCamp</div>
+          <div class="vc-stars"><span class="vc-rating">4.9</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(6.2k)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
-      <a href="https://hbr.org/2022/11/the-best-managers-are-boring-managers" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#7a3b1e,#C17B2F)"><span class="art-src-pill">HBR</span><div class="art-hdr-title">What Great Data Science Leaders Actually Do</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Leadership</div><div class="art-body-title">What Great Data Science Leaders Actually Do</div><div class="art-body-foot"><span class="art-body-meta">Harvard Business Review</span><span class="art-body-link">Read →</span></div></div>
+      <a href="https://youtu.be/vmEHCJofslg" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/vmEHCJofslg" title="Pandas Tutorial — Data Analysis in Python" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">33:06</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Tools & Python · Free</div>
+          <div class="vc-title">Pandas Tutorial — Data Analysis in Python</div>
+          <div class="vc-instructor">Corey Schafer</div>
+          <div class="vc-stars"><span class="vc-rating">4.8</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(2.3k)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
-      <a href="https://www.mckinsey.com" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#1B2F4E,#3d6b9e)"><span class="art-src-pill">McKinsey</span><div class="art-hdr-title">How to Build a Data-First Culture in Large Organisations</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Leadership</div><div class="art-body-title">How to Build a Data-First Culture in Large Organisations</div><div class="art-body-foot"><span class="art-body-meta">McKinsey</span><span class="art-body-link">Read →</span></div></div>
+      <a href="https://youtu.be/ZyhVh-qRZPA" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/ZyhVh-qRZPA" title="Matplotlib Complete Tutorial" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">1:07:00</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Tools & Python · Free</div>
+          <div class="vc-title">Matplotlib Complete Tutorial</div>
+          <div class="vc-instructor">Keith Galli</div>
+          <div class="vc-stars"><span class="vc-rating">4.7</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(1.1k)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
-      <a href="https://sloanreview.mit.edu" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#4a1942,#8B2FC9)"><span class="art-src-pill">MIT Sloan</span><div class="art-hdr-title">The New Analytics Leader: Bridging Strategy and Execution</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Leadership</div><div class="art-body-title">The New Analytics Leader: Bridging Strategy and Execution</div><div class="art-body-foot"><span class="art-body-meta">MIT Sloan Review</span><span class="art-body-link">Read →</span></div></div>
+      <a href="https://youtu.be/0Lt9w-BxKFQ" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/0Lt9w-BxKFQ" title="Scikit-Learn Tutorial for Beginners" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">1:23:00</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Tools & Python · Free</div>
+          <div class="vc-title">Scikit-Learn Tutorial for Beginners</div>
+          <div class="vc-instructor">Codebasics</div>
+          <div class="vc-stars"><span class="vc-rating">4.7</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(988)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
-      <a href="https://hbr.org" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#0a3d20,#1a7a40)"><span class="art-src-pill">HBR</span><div class="art-hdr-title">When Your Data Says One Thing and Your Gut Says Another</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Leadership</div><div class="art-body-title">When Your Data Says One Thing and Your Gut Says Another</div><div class="art-body-foot"><span class="art-body-meta">Harvard Business Review</span><span class="art-body-link">Read →</span></div></div>
+      <a href="https://youtu.be/GBDSBInvz08" target="_blank" class="vc">
+        <div class="vc-thumb">
+          <iframe src="https://www.youtube.com/embed/GBDSBInvz08" title="SQL for Data Science — Complete Course" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="vc-thumb-overlay"><div class="vc-play"></div></div><span class="vc-duration">3:10:00</span>
+        </div>
+        <div class="vc-body">
+          <div class="vc-badge">Tools & Python · Free</div>
+          <div class="vc-title">SQL for Data Science — Complete Course</div>
+          <div class="vc-instructor">Alex The Analyst</div>
+          <div class="vc-stars"><span class="vc-rating">4.8</span><span class="vc-stars-svg"><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg><svg class="vc-star-e" viewBox="0 0 10 10"><polygon points="5,1 6.5,3.5 9.5,4 7.5,6 8,9 5,7.5 2,9 2.5,6 0.5,4 3.5,3.5"/></svg></span><span class="vc-count">(2.7k)</span></div>
+          <div class="vc-free">Free on YouTube</div>
+        </div>
       </a>
     </div>
   </div>
 </div>
 
-<!-- ARTICLES — EXPERIMENTATION -->
-<div id="sec-art-exp">
-  <div class="home-sec-hdr">
-    <div class="home-sec-title">Experimentation Articles</div>
-    <a href="articles.html#sec-experimentation" class="view-all-btn">View All <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-  </div>
-  <div class="home-art-section">
-    <div class="art-row">
-      <a href="https://netflixtechblog.com/experimentation-is-a-major-focus-of-data-science-across-netflix-f67923f8e985" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#0d4d2e,#166534)"><span class="art-src-pill">Netflix Tech Blog</span><div class="art-hdr-title">How Netflix Runs Thousands of A/B Tests Every Year</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Experimentation</div><div class="art-body-title">How Netflix Runs Thousands of A/B Tests Every Year</div><div class="art-body-foot"><span class="art-body-meta">Netflix Tech Blog</span><span class="art-body-link">Read →</span></div></div>
-      </a>
-      <a href="https://towardsdatascience.com/a-b-testing-is-there-a-better-way-an-exploration-of-multi-armed-bandits-98ca927b357d" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#1a3a1a,#2d6e2d)"><span class="art-src-pill">Towards Data Science</span><div class="art-hdr-title">A/B Testing: The Most Misunderstood Tool in Data Science</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Experimentation</div><div class="art-body-title">A/B Testing: The Most Misunderstood Tool in Data Science</div><div class="art-body-foot"><span class="art-body-meta">TDS</span><span class="art-body-link">Read →</span></div></div>
-      </a>
-      <a href="https://hbr.org/2020/03/building-a-culture-of-experimentation" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#1e4d1e,#C17B2F)"><span class="art-src-pill">HBR</span><div class="art-hdr-title">Building an Experimentation Culture at Your Company</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Experimentation</div><div class="art-body-title">Building an Experimentation Culture at Your Company</div><div class="art-body-foot"><span class="art-body-meta">Harvard Business Review</span><span class="art-body-link">Read →</span></div></div>
-      </a>
-      <a href="https://medium.com/airbnb-engineering/experimentation-measurement-for-search-engine-optimization-b64136629760" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#0a3d0a,#155015)"><span class="art-src-pill">Airbnb Tech Blog</span><div class="art-hdr-title">Experimentation at Airbnb: How We Make Data Decisions</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Experimentation</div><div class="art-body-title">Experimentation at Airbnb: How We Make Data Decisions</div><div class="art-body-foot"><span class="art-body-meta">Airbnb Engineering</span><span class="art-body-link">Read →</span></div></div>
-      </a>
-      <a href="https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#2a4a0a,#4a7a12)"><span class="art-src-pill">Microsoft Research</span><div class="art-hdr-title">Online Controlled Experiments at Scale</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Experimentation</div><div class="art-body-title">Online Controlled Experiments at Scale — Microsoft Research</div><div class="art-body-foot"><span class="art-body-meta">Microsoft Research</span><span class="art-body-link">Read →</span></div></div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- ARTICLES — CAREER -->
-<div id="sec-art-career">
-  <div class="home-sec-hdr">
-    <div class="home-sec-title">Career Articles</div>
-    <a href="articles.html#sec-career" class="view-all-btn">View All <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-  </div>
-  <div class="home-art-section">
-    <div class="art-row">
-      <a href="https://www.kdnuggets.com/how-to-stand-out-as-a-data-scientist" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#854F0B,#C17B2F)"><span class="art-src-pill">KDNuggets</span><div class="art-hdr-title">How to Stand Out as a Data Scientist in 2025</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Career</div><div class="art-body-title">How to Stand Out as a Data Scientist in 2025</div><div class="art-body-foot"><span class="art-body-meta">KDNuggets</span><span class="art-body-link">Read →</span></div></div>
-      </a>
-      <a href="https://towardsdatascience.com" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#6b3a0a,#a85f1a)"><span class="art-src-pill">Towards Data Science</span><div class="art-hdr-title">The Data Science Skills That Actually Get You Hired</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Career</div><div class="art-body-title">The Data Science Skills That Actually Get You Hired</div><div class="art-body-foot"><span class="art-body-meta">TDS</span><span class="art-body-link">Read →</span></div></div>
-      </a>
-      <a href="https://hbr.org" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#5a2d0c,#C17B2F)"><span class="art-src-pill">HBR</span><div class="art-hdr-title">How to Transition Into Data Science from Another Field</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Career</div><div class="art-body-title">How to Transition Into Data Science from Another Field</div><div class="art-body-foot"><span class="art-body-meta">Harvard Business Review</span><span class="art-body-link">Read →</span></div></div>
-      </a>
-      <a href="https://www.technologyreview.com" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#3d1e00,#8B4513)"><span class="art-src-pill">MIT Tech Review</span><div class="art-hdr-title">Will AI Replace Data Scientists? The Honest Answer</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Career</div><div class="art-body-title">Will AI Replace Data Scientists? The Honest Answer</div><div class="art-body-foot"><span class="art-body-meta">MIT Technology Review</span><span class="art-body-link">Read →</span></div></div>
-      </a>
-      <a href="https://www.kdnuggets.com" target="_blank" class="art-card-v2">
-        <div class="art-card-v2-hdr" style="background:linear-gradient(145deg,#4d2600,#9a5200)"><span class="art-src-pill">KDNuggets</span><div class="art-hdr-title">From Data Analyst to Data Scientist: The Real Difference</div></div>
-        <div class="art-card-v2-body"><div class="art-cat-label">Career</div><div class="art-body-title">From Data Analyst to Data Scientist: The Real Difference</div><div class="art-body-foot"><span class="art-body-meta">KDNuggets</span><span class="art-body-link">Read →</span></div></div>
-      </a>
-    </div>
-  </div>
-</div>
-
-
+<div class="toast" id="toast"></div>
 <!-- ═══ CTA SLIDER ════════════════════════════════════════════════════════ -->
 <div class="cta-slider-wrap">
   <div class="cta-track" id="ctaTrack">
@@ -570,34 +647,10 @@
 
 <style>
 /* ── CTA SLIDER ─────────────────────────────────────────────────────────── */
-.cta-slider-wrap{
-  background:#fff;
-  border-top:4px solid #C17B2F;
-  border-bottom:1px solid rgba(27,47,78,.1);
-  position:relative;
-  overflow:hidden;
-}
-.cta-track{
-  display:flex;
-  transition:transform .55s cubic-bezier(.4,0,.2,1);
-  will-change:transform;
-}
-.cta-slide{
-  min-width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:2.25rem 5%;
-  gap:2rem;
-  flex-wrap:wrap;
-}
-.cta-slide-left{
-  display:flex;
-  align-items:flex-start;
-  gap:1.25rem;
-  flex:1;
-  min-width:0;
-}
+.cta-slider-wrap{background:#fff;border-top:4px solid #C17B2F;border-bottom:1px solid rgba(27,47,78,.1);position:relative;overflow:hidden}
+.cta-track{display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1);will-change:transform}
+.cta-slide{min-width:100%;display:flex;align-items:center;justify-content:space-between;padding:2.25rem 5%;gap:2rem;flex-wrap:nowrap}
+.cta-slide-left{display:flex;align-items:flex-start;gap:1.25rem;flex:1;min-width:0}
 .cta-slide-icon{
   width:48px;height:48px;flex-shrink:0;
   background:rgba(193,123,47,.08);
@@ -664,40 +717,6 @@
 }
 </style>
 
-<script>
-(function(){
-  var track=document.getElementById('ctaTrack');
-  var slides=[...track.querySelectorAll('.cta-slide')];
-  var dotsWrap=document.getElementById('ctaDots');
-  var cur=0, total=slides.length, timer;
-
-  // build dots
-  slides.forEach(function(_,i){
-    var d=document.createElement('button');
-    d.className='cta-dot'+(i===0?' active':'');
-    d.setAttribute('aria-label','Slide '+(i+1));
-    d.addEventListener('click',function(){goTo(i);resetTimer();});
-    dotsWrap.appendChild(d);
-  });
-
-  function goTo(n){
-    cur=(n+total)%total;
-    track.style.transform='translateX(-'+cur*100+'%)';
-    [...dotsWrap.querySelectorAll('.cta-dot')].forEach(function(d,i){
-      d.classList.toggle('active',i===cur);
-    });
-  }
-
-  function ctaMove(dir){goTo(cur+dir);resetTimer();}
-  window.ctaMove=ctaMove;
-
-  function resetTimer(){
-    clearInterval(timer);
-    timer=setInterval(function(){goTo(cur+1);},5000);
-  }
-  resetTimer();
-})();
-</script>
 <footer class="site-footer">
   <div class="footer-top" style="grid-template-columns:2.4fr 1fr 1fr 1fr">
     <div>
@@ -763,15 +782,14 @@
     </div>
   </div>
 </footer>
-<div class="toast" id="toast"></div>
 <script>
 function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('open')}
 function scrollToSubscribe(){var b=document.getElementById('subscribeBox');if(b)b.scrollIntoView({behavior:'smooth',block:'center'});}
 function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},4000);}
 
 // ── STICKY CATEGORY NAV ──────────────────────────────────────────────────
-var HOME_OFFSET = 115; // site-nav(58) + cat-nav(44) + buffer
-var homeSecs = ['sec-vid-ml','sec-vid-career','sec-art-ml','sec-art-genai','sec-art-leadership','sec-art-exp','sec-art-career'];
+var HOME_OFFSET = 115;
+var homeSecs = ['sec-vid-ml','sec-vid-career','sec-vid-decision','sec-vid-genai','sec-vid-tools'];
 
 function scrollToHomeSection(id){
   var el = document.getElementById(id);
@@ -788,7 +806,6 @@ document.querySelectorAll('.hc-tab').forEach(function(tab){
   });
 });
 
-// Scroll spy
 window.addEventListener('scroll', function(){
   var scrollY = window.pageYOffset + HOME_OFFSET + 40;
   homeSecs.forEach(function(id){
@@ -801,7 +818,7 @@ window.addEventListener('scroll', function(){
   });
 },{passive:true});
 
-// ── SUBSCRIBE FORM ────────────────────────────────────────────────────────
+// ── SUBSCRIBE ────────────────────────────────────────────────────────────
 var sf = document.getElementById('subscribeForm');
 if(sf) sf.addEventListener('submit', function(e){
   e.preventDefault();

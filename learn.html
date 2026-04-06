@@ -187,7 +187,14 @@
 /* ── PROFESSIONAL BOOK CARDS ────────────────────────────────────────── */
 .bk-card{display:flex;flex-direction:column;border:1px solid rgba(27,47,78,.08);border-radius:4px;overflow:hidden;transition:box-shadow .2s,transform .2s;cursor:pointer}
 .bk-card:hover{box-shadow:0 8px 24px rgba(27,47,78,.13);transform:translateY(-2px)}
-.bk-hdr{height:150px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:14px 16px;position:relative;flex-shrink:0}
+.bk-hdr{height:170px;position:relative;flex-shrink:0;overflow:hidden}
+.bk-cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:opacity .3s}
+.bk-hdr:not(.has-cover) .bk-cover-img{opacity:0}
+.bk-hdr.has-cover{background:#111}
+.bk-cover-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:12px 14px;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 60%,transparent 100%)}
+.bk-hdr-title{font-family:"Playfair Display",serif;font-size:14px;color:#fff;line-height:1.3;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.bk-hdr-author{font-size:11px;color:rgba(255,255,255,.75);text-shadow:0 1px 2px rgba(0,0,0,.4)}
+.bk-cat-pill{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.22);color:#fff;padding:3px 9px;border-radius:10px;margin-bottom:6px;width:fit-content;text-shadow:none;backdrop-filter:blur(4px)}
 .bk-cat-pill{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.18);color:rgba(255,255,255,.9);padding:3px 9px;border-radius:10px;margin-bottom:8px;width:fit-content}
 .bk-hdr-title{font-family:'Playfair Display',serif;font-size:14px;color:#fff;line-height:1.3;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .bk-hdr-author{font-size:11px;color:rgba(255,255,255,.65)}
@@ -680,8 +687,14 @@
 
   <div class="bk-card" data-bcat="ds">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#0F2A4A,#24426B)">
-      <div class="bk-cat-pill">Data Science</div>
-      <div class="bk-hdr-title">The Art of Statistics</div>
+      <img src="https://covers.openlibrary.org/b/isbn/9780241258767-M.jpg" alt="The Art of Statistics" class="bk-cover-img"
+        onerror="this.style.display='none'"
+        onload="this.parentElement.classList.add('has-cover')">
+      <div class="bk-cover-overlay">
+        <div class="bk-cat-pill">Data Science</div>
+        <div class="bk-hdr-title">The Art of Statistics</div>
+      </div>
+    </div>
       <div class="bk-hdr-author">David Spiegelhalter</div>
     </div>
     <div class="bk-body">
@@ -694,8 +707,10 @@
 
   <div class="bk-card" data-bcat="ai">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#2d1b69,#534AB7)">
-      <div class="bk-cat-pill">AI &amp; ML</div>
-      <div class="bk-hdr-title">Prediction Machines</div>
+      <img src="https://covers.openlibrary.org/b/isbn/9781633695672-M.jpg" alt="Prediction Machines" class="bk-cover-img" onerror="this.style.display='none'" onload="this.parentElement.classList.add('has-cover')">
+      <div class="bk-cover-overlay">
+        <div class="bk-cat-pill">AI &amp; ML</div>
+        <div class="bk-hdr-title">Prediction Machines</div>
       <div class="bk-hdr-author">Agrawal, Gans &amp; Goldfarb</div>
     </div>
     <div class="bk-body">
@@ -708,8 +723,14 @@
 
   <div class="bk-card" data-bcat="leadership">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#0d4d2e,#166534)">
-      <div class="bk-cat-pill">Leadership</div>
-      <div class="bk-hdr-title">Thinking in Systems</div>
+      <img src="https://covers.openlibrary.org/b/isbn/9781603580557-M.jpg" alt="Thinking in Systems" class="bk-cover-img"
+        onerror="this.style.display='none'"
+        onload="this.parentElement.classList.add('has-cover')">
+      <div class="bk-cover-overlay">
+        <div class="bk-cat-pill">Leadership</div>
+        <div class="bk-hdr-title">Thinking in Systems</div>
+      </div>
+    </div>
       <div class="bk-hdr-author">Donella Meadows</div>
     </div>
     <div class="bk-body">
@@ -722,8 +743,14 @@
 
   <div class="bk-card" data-bcat="strategy">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#7a3b1e,#C17B2F)">
-      <div class="bk-cat-pill">Strategy</div>
-      <div class="bk-hdr-title">Good Strategy Bad Strategy</div>
+      <img src="https://covers.openlibrary.org/b/isbn/9780307886231-M.jpg" alt="Good Strategy Bad Strategy" class="bk-cover-img"
+        onerror="this.style.display='none'"
+        onload="this.parentElement.classList.add('has-cover')">
+      <div class="bk-cover-overlay">
+        <div class="bk-cat-pill">Strategy</div>
+        <div class="bk-hdr-title">Good Strategy Bad Strategy</div>
+      </div>
+    </div>
       <div class="bk-hdr-author">Richard Rumelt</div>
     </div>
     <div class="bk-body">
@@ -736,8 +763,14 @@
 
   <div class="bk-card" data-bcat="ds">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#1B2F4E,#378ADD)">
-      <div class="bk-cat-pill">Data Science</div>
-      <div class="bk-hdr-title">Naked Statistics</div>
+      <img src="https://covers.openlibrary.org/b/isbn/9780393347777-M.jpg" alt="Naked Statistics" class="bk-cover-img"
+        onerror="this.style.display='none'"
+        onload="this.parentElement.classList.add('has-cover')">
+      <div class="bk-cover-overlay">
+        <div class="bk-cat-pill">Data Science</div>
+        <div class="bk-hdr-title">Naked Statistics</div>
+      </div>
+    </div>
       <div class="bk-hdr-author">Charles Wheelan</div>
     </div>
     <div class="bk-body">
@@ -750,8 +783,10 @@
 
   <div class="bk-card" data-bcat="ai">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#1a1a2e,#4a47a3)">
-      <div class="bk-cat-pill">AI &amp; ML</div>
-      <div class="bk-hdr-title">The Alignment Problem</div>
+      <img src="https://covers.openlibrary.org/b/isbn/9780393635782-M.jpg" alt="The Alignment Problem" class="bk-cover-img" onerror="this.style.display='none'" onload="this.parentElement.classList.add('has-cover')">
+      <div class="bk-cover-overlay">
+        <div class="bk-cat-pill">AI &amp; ML</div>
+        <div class="bk-hdr-title">The Alignment Problem</div>
       <div class="bk-hdr-author">Brian Christian</div>
     </div>
     <div class="bk-body">
@@ -764,8 +799,14 @@
 
   <div class="bk-card" data-bcat="leadership">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#2C2C2A,#5a5a56)">
-      <div class="bk-cat-pill">Leadership</div>
-      <div class="bk-hdr-title">The Manager's Path</div>
+      <img src="https://covers.openlibrary.org/b/isbn/9781491973899-M.jpg" alt="The Manager's Path" class="bk-cover-img"
+        onerror="this.style.display='none'"
+        onload="this.parentElement.classList.add('has-cover')">
+      <div class="bk-cover-overlay">
+        <div class="bk-cat-pill">Leadership</div>
+        <div class="bk-hdr-title">The Manager's Path</div>
+      </div>
+    </div>
       <div class="bk-hdr-author">Camille Fournier</div>
     </div>
     <div class="bk-body">
@@ -778,8 +819,14 @@
 
   <div class="bk-card" data-bcat="strategy">
     <div class="bk-hdr" style="background:linear-gradient(145deg,#3d1a00,#a85f1a)">
-      <div class="bk-cat-pill">Strategy</div>
-      <div class="bk-hdr-title">Thinking, Fast and Slow</div>
+      <img src="https://covers.openlibrary.org/b/isbn/9780374533557-M.jpg" alt="Thinking, Fast and Slow" class="bk-cover-img"
+        onerror="this.style.display='none'"
+        onload="this.parentElement.classList.add('has-cover')">
+      <div class="bk-cover-overlay">
+        <div class="bk-cat-pill">Strategy</div>
+        <div class="bk-hdr-title">Thinking, Fast and Slow</div>
+      </div>
+    </div>
       <div class="bk-hdr-author">Daniel Kahneman</div>
     </div>
     <div class="bk-body">
@@ -801,7 +848,7 @@
     <div style="font-family:sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--inkl);margin-bottom:14px">Free Resources &amp; Open Access Books <span style="background:var(--green2);color:var(--green);padding:2px 8px;border-radius:2px;font-size:9px;margin-left:6px;font-weight:500">100% Free &amp; Legal</span></div>
     <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px" id="freeGrid">
 
-      <div class="book-card free-card" data-bcat="free">
+      <div class="book-card free-card" style="display:flex;flex-direction:column" data-bcat="free">
         <div style="background:#1B4E3A;border-bottom:3px solid var(--green);padding:16px 14px;text-align:center;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center">
           <div style="font-size:1.8rem;margin-bottom:5px">📊</div>
           <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
@@ -815,7 +862,7 @@
         </div>
       </div>
 
-      <div class="book-card free-card" data-bcat="free">
+      <div class="book-card free-card" style="display:flex;flex-direction:column" data-bcat="free">
         <div style="background:#1a1a2e;border-bottom:3px solid var(--green);padding:16px 14px;text-align:center;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center">
           <div style="font-size:1.8rem;margin-bottom:5px">🧠</div>
           <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
@@ -829,7 +876,7 @@
         </div>
       </div>
 
-      <div class="book-card free-card" data-bcat="free">
+      <div class="book-card free-card" style="display:flex;flex-direction:column" data-bcat="free">
         <div style="background:#1B2F4E;border-bottom:3px solid var(--green);padding:16px 14px;text-align:center;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center">
           <div style="font-size:1.8rem;margin-bottom:5px">🐍</div>
           <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
@@ -843,7 +890,7 @@
         </div>
       </div>
 
-      <div class="book-card free-card" data-bcat="free">
+      <div class="book-card free-card" style="display:flex;flex-direction:column" data-bcat="free">
         <div style="background:#2d1b69;border-bottom:3px solid var(--green);padding:16px 14px;text-align:center;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center">
           <div style="font-size:1.8rem;margin-bottom:5px">📈</div>
           <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
@@ -857,7 +904,7 @@
         </div>
       </div>
 
-      <div class="book-card free-card" data-bcat="free">
+      <div class="book-card free-card" style="display:flex;flex-direction:column" data-bcat="free">
         <div style="background:#166534;border-bottom:3px solid var(--green);padding:16px 14px;text-align:center;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center">
           <div style="font-size:1.8rem;margin-bottom:5px">∑</div>
           <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
@@ -871,7 +918,7 @@
         </div>
       </div>
 
-      <div class="book-card free-card" data-bcat="free">
+      <div class="book-card free-card" style="display:flex;flex-direction:column" data-bcat="free">
         <div style="background:#3d1a00;border-bottom:3px solid var(--green);padding:16px 14px;text-align:center;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center">
           <div style="font-size:1.8rem;margin-bottom:5px">📉</div>
           <div style="font-family:sans-serif;font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500">Free · Open Access</div>
@@ -884,11 +931,7 @@
           <a href="https://probml.github.io/pml-book/" target="_blank" class="book-btn" style="background:var(--green);color:#fff;border-color:var(--green)">Read Free Online →</a>
         </div>
       </div>
-<div style="display:flex;align-items:center;justify-content:center;gap:6px;padding:1rem;border-top:0.5px solid var(--rule)">
-  <button onclick="freeBookPage(-1)" id="fbPrev" style="font-family:sans-serif;font-size:12px;padding:5px 12px;border:0.5px solid var(--rule);color:var(--inkm);cursor:pointer;background:#fff" disabled>← Prev</button>
-  <span id="fbInfo" style="font-family:sans-serif;font-size:12px;color:var(--inkl);padding:0 8px"></span>
-  <button onclick="freeBookPage(1)" id="fbNext" style="font-family:sans-serif;font-size:12px;padding:5px 12px;border:0.5px solid var(--rule);color:var(--inkm);cursor:pointer;background:#fff">Next →</button>
-</div>
+
 
     </div>
   </div>
@@ -995,34 +1038,10 @@
 
 <style>
 /* ── CTA SLIDER ─────────────────────────────────────────────────────────── */
-.cta-slider-wrap{
-  background:#fff;
-  border-top:4px solid #C17B2F;
-  border-bottom:1px solid rgba(27,47,78,.1);
-  position:relative;
-  overflow:hidden;
-}
-.cta-track{
-  display:flex;
-  transition:transform .55s cubic-bezier(.4,0,.2,1);
-  will-change:transform;
-}
-.cta-slide{
-  min-width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:2.25rem 5%;
-  gap:2rem;
-  flex-wrap:wrap;
-}
-.cta-slide-left{
-  display:flex;
-  align-items:flex-start;
-  gap:1.25rem;
-  flex:1;
-  min-width:0;
-}
+.cta-slider-wrap{background:#fff;border-top:4px solid #C17B2F;border-bottom:1px solid rgba(27,47,78,.1);position:relative;overflow:hidden}
+.cta-track{display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1);will-change:transform}
+.cta-slide{min-width:100%;display:flex;align-items:center;justify-content:space-between;padding:2.25rem 5%;gap:2rem;flex-wrap:nowrap}
+.cta-slide-left{display:flex;align-items:flex-start;gap:1.25rem;flex:1;min-width:0}
 .cta-slide-icon{
   width:48px;height:48px;flex-shrink:0;
   background:rgba(193,123,47,.08);
@@ -1089,40 +1108,6 @@
 }
 </style>
 
-<script>
-(function(){
-  var track=document.getElementById('ctaTrack');
-  var slides=[...track.querySelectorAll('.cta-slide')];
-  var dotsWrap=document.getElementById('ctaDots');
-  var cur=0, total=slides.length, timer;
-
-  // build dots
-  slides.forEach(function(_,i){
-    var d=document.createElement('button');
-    d.className='cta-dot'+(i===0?' active':'');
-    d.setAttribute('aria-label','Slide '+(i+1));
-    d.addEventListener('click',function(){goTo(i);resetTimer();});
-    dotsWrap.appendChild(d);
-  });
-
-  function goTo(n){
-    cur=(n+total)%total;
-    track.style.transform='translateX(-'+cur*100+'%)';
-    [...dotsWrap.querySelectorAll('.cta-dot')].forEach(function(d,i){
-      d.classList.toggle('active',i===cur);
-    });
-  }
-
-  function ctaMove(dir){goTo(cur+dir);resetTimer();}
-  window.ctaMove=ctaMove;
-
-  function resetTimer(){
-    clearInterval(timer);
-    timer=setInterval(function(){goTo(cur+1);},5000);
-  }
-  resetTimer();
-})();
-</script>
 
 <footer class="site-footer">
   <div class="footer-top" style="grid-template-columns:2.4fr 1fr 1fr 1fr">
@@ -1322,7 +1307,7 @@ if(mcm) mcm.addEventListener('click', function(e){ if(e.target===this) closeMcMo
 
 // ── BOOK FILTER ───────────────────────────────────────────────────────────
 function filterBooks(btn, cat){
-  document.querySelectorAll('#bookGrid .bk-card, #freeGrid .free-card').forEach(function(c){
+  document.querySelectorAll('#bookGrid .bk-card, #freeGrid .free-card, #freeGrid .book-card').forEach(function(c){
     c.style.display = (cat==='all' || c.dataset.bcat===cat) ? 'flex' : 'none';
   });
   document.querySelectorAll('.filter-chip').forEach(function(c){c.classList.remove('active');});
@@ -1330,17 +1315,12 @@ function filterBooks(btn, cat){
 }
 
 // ── FREE BOOK PAGINATION ──────────────────────────────────────────────────
-var fbPage=0; var FB_PER=3;
-function freeBookPage(dir){
-  var all = [...document.querySelectorAll('#freeGrid .free-card')];
-  fbPage = Math.max(0, Math.min(fbPage+dir, Math.ceil(all.length/FB_PER)-1));
-  all.forEach(function(el,i){ el.style.display=(i>=fbPage*FB_PER && i<(fbPage+1)*FB_PER)?'flex':'none'; });
-  var prev=document.getElementById('fbPrev'), next=document.getElementById('fbNext'), info=document.getElementById('fbInfo');
-  if(prev) prev.disabled = fbPage===0;
-  if(next) next.disabled = fbPage>=Math.ceil(all.length/FB_PER)-1;
-  if(info) info.textContent = 'Page '+(fbPage+1)+' of '+Math.ceil(all.length/FB_PER);
-}
-(function(){ var all=[...document.querySelectorAll('#freeGrid .free-card')]; if(all.length) freeBookPage(0); })();
+// Free books — show all by default in 5-col grid, no pagination needed
+(function(){
+  document.querySelectorAll('#freeGrid .free-card').forEach(function(c){
+    c.style.display='flex';
+  });
+})();
 
 // ── COACHING BOOKING ──────────────────────────────────────────────────────
 function scrollToCoaching(){ scrollToSection('sec-coaching'); }
