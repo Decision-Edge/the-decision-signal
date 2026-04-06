@@ -83,6 +83,19 @@
 }
 @media(max-width:600px){.art-card{min-width:180px;max-width:180px}}
 </style>
+
+<style id="articles-fix">
+.art-card{flex:0 0 calc(20% - 8px) !important;width:calc(20% - 8px) !important;border:0.5px solid var(--rule) !important;border-radius:4px !important;overflow:hidden !important}
+.art-card-exc{font-family:'DM Sans',sans-serif;font-size:11.5px;color:var(--inkm);line-height:1.65;margin-top:6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex-shrink:0}
+.art-card-hdr{height:155px !important}
+.art-card-hdr-title{font-family:'Playfair Display',serif !important;font-size:14px !important;font-weight:400 !important;line-height:1.35 !important}
+.art-card-title{font-family:'Playfair Display',serif;font-size:13.5px;line-height:1.4}
+.slider-inner{gap:10px !important;padding:0 2px}
+.cat-body{gap:10px !important;background:var(--warm) !important;padding:0 0 1.5rem !important}
+.feat-card{border-radius:4px !important;border:0.5px solid var(--rule) !important}
+.slider-wrap{border-radius:4px !important;border:0.5px solid var(--rule) !important;overflow:hidden !important}
+.cat-section{background:var(--warm)}
+</style>
 </head>
 <body>
 
@@ -167,7 +180,7 @@
     <!-- Featured -->
     <div class="feat-card">
       <div class="feat-hdr">
-        <div class="feat-hdr-inner" style="background:linear-gradient(145deg,#0F2A4A,#24426B)">
+        <div class="feat-hdr-inner" style="background:linear-gradient(rgba(10,25,45,0.52),rgba(10,25,45,0.75)),url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=640&q=80') center/cover no-repeat;">
           <span class="feat-badge">Featured · ML &amp; AI</span>
           <div class="feat-hdr-title">Chaos Theory, the Butterfly Effect and the Computer Glitch That Started It All</div>
         </div>
@@ -185,57 +198,62 @@
     <div class="slider-wrap">
       <div class="slider-inner" id="sl-ml">
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#0F6E56,#1D9E75)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Towards Data Science</span>
             <div class="art-card-hdr-title">The Economics of Machine Learning in Production</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">ML &amp; AI · Strategy</div>
             <div class="art-card-title">The Economics of Machine Learning in Production</div>
+            <p class="art-card-exc">Why most ML projects fail to generate ROI — and what separates experiments that scale from those that stall at the proof-of-concept stage.</p>
             <div class="art-card-foot"><span class="art-card-meta">TDS</span><a href="https://towardsdatascience.com/the-economics-of-machine-learning-in-production-dc0b8d03c28a" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#1a1a2e,#534AB7)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">McKinsey</span>
             <div class="art-card-hdr-title">The Data-Driven Enterprise: What It Actually Takes</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">ML &amp; AI · Enterprise</div>
             <div class="art-card-title">The Data-Driven Enterprise: What It Actually Takes</div>
+            <p class="art-card-exc">McKinsey analysis of what separates organisations that generate real value from data from those that accumulate dashboards.</p>
             <div class="art-card-foot"><span class="art-card-meta">McKinsey</span><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-data-driven-enterprise-of-2025" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#1B2F4E,#378ADD)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Google AI Blog</span>
             <div class="art-card-hdr-title">Anomaly Detection at Scale: Lessons from Production</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">ML &amp; AI · Engineering</div>
             <div class="art-card-title">Anomaly Detection at Scale: Lessons from Production</div>
+            <p class="art-card-exc">Hard-won lessons from deploying anomaly detection systems in production — what works, what breaks, and what to instrument first.</p>
             <div class="art-card-foot"><span class="art-card-meta">Google AI</span><a href="https://ai.googleblog.com/" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#2d1b69,#7F77DD)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">MIT Tech Review</span>
             <div class="art-card-hdr-title">The Real Risk of AI Is Not What You Think</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">ML &amp; AI · Risk</div>
             <div class="art-card-title">The Real Risk of AI Is Not What You Think</div>
+            <p class="art-card-exc">The biggest AI dangers are mundane: bias, misuse, and misplaced trust in systems that seem authoritative but are not.</p>
             <div class="art-card-foot"><span class="art-card-meta">MIT Tech Review</span><a href="https://www.technologyreview.com/2023/06/06/1074001/the-real-risks-of-artificial-intelligence/" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#14532d,#166534)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Harvard Business Review</span>
             <div class="art-card-hdr-title">How to Use Data to Make Better Decisions Faster</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">ML &amp; AI · Decision Making</div>
             <div class="art-card-title">How to Use Data to Make Better Decisions Faster</div>
+            <p class="art-card-exc">Speed and accuracy are often in tension. This piece explains how to structure decisions so data accelerates rather than paralyses.</p>
             <div class="art-card-foot"><span class="art-card-meta">HBR</span><a href="https://hbr.org/2019/02/how-to-use-data-to-make-better-decisions" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
@@ -263,7 +281,7 @@
   <div class="cat-body">
     <div class="feat-card">
       <div class="feat-hdr">
-        <div class="feat-hdr-inner" style="background:linear-gradient(145deg,#2d1b69,#534AB7)">
+        <div class="feat-hdr-inner" style="background:linear-gradient(rgba(10,25,45,0.52),rgba(10,25,45,0.75)),url('https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=640&q=80') center/cover no-repeat;">
           <span class="feat-badge">Featured · Generative AI</span>
           <div class="feat-hdr-title">The Real Risk of AI Is Not What You Think</div>
         </div>
@@ -279,57 +297,62 @@
     <div class="slider-wrap">
       <div class="slider-inner" id="sl-genai">
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#1a1a2e,#7F77DD)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">OpenAI Blog</span>
             <div class="art-card-hdr-title">Introducing GPT-4 and What It Means for Enterprise AI</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Generative AI · LLMs</div>
             <div class="art-card-title">What GPT-4 Means for Enterprise AI Strategy</div>
+            <p class="art-card-exc">Beyond the benchmarks — what capability jumps in foundation models actually mean for enterprise AI investment priorities.</p>
             <div class="art-card-foot"><span class="art-card-meta">OpenAI</span><a href="https://openai.com/research/gpt-4" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#3d1a6e,#9B59B6)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Harvard Business Review</span>
             <div class="art-card-hdr-title">How to Actually Use Generative AI in Your Business</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Generative AI · Strategy</div>
             <div class="art-card-title">How to Actually Use Generative AI in Your Business</div>
+            <p class="art-card-exc">HBR cuts through the hype with practical guidance on where GenAI creates genuine value and where it creates expensive noise.</p>
             <div class="art-card-foot"><span class="art-card-meta">HBR</span><a href="https://hbr.org/2023/07/how-to-use-generative-ai-as-a-thought-partner" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#1e3a5f,#2E86C1)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">DeepMind Blog</span>
             <div class="art-card-hdr-title">From Research to Reality: Deploying Foundation Models</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Generative AI · Deployment</div>
             <div class="art-card-title">From Research to Reality: Deploying Foundation Models</div>
+            <p class="art-card-exc">The gap between research demos and production deployments is wider than most teams expect. DeepMind on what it actually takes.</p>
             <div class="art-card-foot"><span class="art-card-meta">DeepMind</span><a href="https://deepmind.google/research/" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#2d1b69,#C17B2F)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Towards Data Science</span>
             <div class="art-card-hdr-title">Building RAG Pipelines That Actually Work in Production</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Generative AI · RAG</div>
             <div class="art-card-title">Building RAG Pipelines That Actually Work in Production</div>
+            <p class="art-card-exc">Retrieval-augmented generation sounds simple. Scaling it to production with low latency and high accuracy is anything but.</p>
             <div class="art-card-foot"><span class="art-card-meta">TDS</span><a href="https://towardsdatascience.com" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#0d2137,#1B4F72)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">McKinsey</span>
             <div class="art-card-hdr-title">The State of Generative AI in the Enterprise</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Generative AI · Enterprise</div>
             <div class="art-card-title">The State of Generative AI in the Enterprise</div>
+            <p class="art-card-exc">McKinsey's annual AI state-of-the-union: adoption rates, value capture, and the organisational factors that drive ROI.</p>
             <div class="art-card-foot"><span class="art-card-meta">McKinsey</span><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
@@ -357,7 +380,7 @@
   <div class="cat-body">
     <div class="feat-card">
       <div class="feat-hdr">
-        <div class="feat-hdr-inner" style="background:linear-gradient(145deg,#1B2F4E,#24426B)">
+        <div class="feat-hdr-inner" style="background:linear-gradient(rgba(10,25,45,0.52),rgba(10,25,45,0.75)),url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=640&q=80') center/cover no-repeat;">
           <span class="feat-badge">Featured · Leadership</span>
           <div class="feat-hdr-title">What Project Managers Need To Know About Pre-Mortems</div>
         </div>
@@ -373,57 +396,62 @@
     <div class="slider-wrap">
       <div class="slider-inner" id="sl-leadership">
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#7a3b1e,#C17B2F)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Harvard Business Review</span>
             <div class="art-card-hdr-title">What Great Data Science Leaders Actually Do</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Leadership · Management</div>
             <div class="art-card-title">What Great Data Science Leaders Actually Do</div>
+            <p class="art-card-exc">Rigour over flash, enablement over credit, consistent process over heroic effort — the qualities that matter most.</p>
             <div class="art-card-foot"><span class="art-card-meta">HBR</span><a href="https://hbr.org/2022/11/the-best-managers-are-boring-managers" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#2C2C2A,#5F5E5A)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Harvard Business Review</span>
             <div class="art-card-hdr-title">When Your Data Says One Thing and Your Gut Says Another</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Leadership · Strategy</div>
             <div class="art-card-title">When Your Data Says One Thing and Your Gut Says Another</div>
+            <p class="art-card-exc">A framework for navigating the tension between quantitative signals and experienced intuition in high-stakes decisions.</p>
             <div class="art-card-foot"><span class="art-card-meta">HBR</span><a href="https://hbr.org" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#1B2F4E,#3d6b9e)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">McKinsey</span>
             <div class="art-card-hdr-title">How to Build a Data-First Culture in Large Organisations</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Leadership · Culture</div>
             <div class="art-card-title">How to Build a Data-First Culture in Large Organisations</div>
+            <p class="art-card-exc">Culture eats strategy for breakfast. McKinsey on the organisational levers that make data literacy stick at scale.</p>
             <div class="art-card-foot"><span class="art-card-meta">McKinsey</span><a href="https://www.mckinsey.com" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#4a1942,#8B2FC9)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">MIT Sloan</span>
             <div class="art-card-hdr-title">The New Analytics Leader: Bridging Strategy and Execution</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Leadership · AI Strategy</div>
             <div class="art-card-title">The New Analytics Leader: Bridging Strategy and Execution</div>
+            <p class="art-card-exc">The most effective analytics leaders aren't the best modellers — they're the best translators between data and decision.</p>
             <div class="art-card-foot"><span class="art-card-meta">MIT Sloan</span><a href="https://sloanreview.mit.edu" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#0a3d20,#1a7a40)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Harvard Business Review</span>
             <div class="art-card-hdr-title">Why Diverse Data Teams Make Better Decisions</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Leadership · Teams</div>
             <div class="art-card-title">Why Diverse Data Teams Make Better Decisions</div>
+            <p class="art-card-exc">Homogeneous teams have blind spots that show up in their models. The business case for diversity in data science.</p>
             <div class="art-card-foot"><span class="art-card-meta">HBR</span><a href="https://hbr.org" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
@@ -451,7 +479,7 @@
   <div class="cat-body">
     <div class="feat-card">
       <div class="feat-hdr">
-        <div class="feat-hdr-inner" style="background:linear-gradient(145deg,#166534,#3B6D11)">
+        <div class="feat-hdr-inner" style="background:linear-gradient(rgba(10,25,45,0.52),rgba(10,25,45,0.75)),url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=640&q=80') center/cover no-repeat;">
           <span class="feat-badge">Featured · Experimentation</span>
           <div class="feat-hdr-title">A/B Testing: The Most Misunderstood Tool in Data Science</div>
         </div>
@@ -467,57 +495,62 @@
     <div class="slider-wrap">
       <div class="slider-inner" id="sl-experimentation">
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#0d4d2e,#166534)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Netflix Tech Blog</span>
             <div class="art-card-hdr-title">How Netflix Runs Thousands of A/B Tests Every Year</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Experimentation · Scale</div>
             <div class="art-card-title">How Netflix Runs Thousands of A/B Tests Every Year</div>
+            <p class="art-card-exc">Netflix's experimentation platform processes thousands of tests simultaneously — the infrastructure and culture that makes it possible.</p>
             <div class="art-card-foot"><span class="art-card-meta">Netflix Tech</span><a href="https://netflixtechblog.com/experimentation-is-a-major-focus-of-data-science-across-netflix-f67923f8e985" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#1a3a1a,#2d6e2d)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1509228468518-180dd4864904?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Towards Data Science</span>
             <div class="art-card-hdr-title">Causal Inference vs Correlation: Why It Matters in DS</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Experimentation · Causal</div>
             <div class="art-card-title">Causal Inference vs Correlation: Why It Matters in Data Science</div>
+            <p class="art-card-exc">Correlation tells you what happened. Causal inference tells you why — and whether your intervention will actually work.</p>
             <div class="art-card-foot"><span class="art-card-meta">TDS</span><a href="https://towardsdatascience.com" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#2a4a0a,#4a7a12)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Microsoft Research</span>
             <div class="art-card-hdr-title">Online Controlled Experiments at Scale</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Experimentation · Methods</div>
             <div class="art-card-title">Online Controlled Experiments at Scale</div>
+            <p class="art-card-exc">Microsoft Research on the statistical and engineering challenges of running rigorous experiments across hundreds of millions of users.</p>
             <div class="art-card-foot"><span class="art-card-meta">Microsoft Research</span><a href="https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#1e4d1e,#C17B2F)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Harvard Business Review</span>
             <div class="art-card-hdr-title">Building an Experimentation Culture at Your Company</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Experimentation · Culture</div>
             <div class="art-card-title">Building an Experimentation Culture at Your Company</div>
+            <p class="art-card-exc">The technical infrastructure for A/B testing is the easy part. Building the organisational culture to act on results is not.</p>
             <div class="art-card-foot"><span class="art-card-meta">HBR</span><a href="https://hbr.org/2020/03/building-a-culture-of-experimentation" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#0a3d0a,#155015)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Airbnb Tech Blog</span>
             <div class="art-card-hdr-title">Experimentation at Airbnb: How We Make Decisions</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Experimentation · Case Study</div>
             <div class="art-card-title">Experimentation at Airbnb: How We Make Data Decisions</div>
+            <p class="art-card-exc">Inside Airbnb's experimentation platform — how they resolve conflicting metrics, prevent peeking, and communicate results.</p>
             <div class="art-card-foot"><span class="art-card-meta">Airbnb Tech</span><a href="https://medium.com/airbnb-engineering/experimentation-measurement-for-search-engine-optimization-b64136629760" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
@@ -545,7 +578,7 @@
   <div class="cat-body">
     <div class="feat-card">
       <div class="feat-hdr">
-        <div class="feat-hdr-inner" style="background:linear-gradient(145deg,#854F0B,#C17B2F)">
+        <div class="feat-hdr-inner" style="background:linear-gradient(rgba(10,25,45,0.52),rgba(10,25,45,0.75)),url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=640&q=80') center/cover no-repeat;">
           <span class="feat-badge">Featured · Career</span>
           <div class="feat-hdr-title">How to Stand Out as a Data Scientist in 2025</div>
         </div>
@@ -561,57 +594,62 @@
     <div class="slider-wrap">
       <div class="slider-inner" id="sl-career">
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#6b3a0a,#a85f1a)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Towards Data Science</span>
             <div class="art-card-hdr-title">The Data Science Skills That Actually Get You Hired</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Career · Skills</div>
             <div class="art-card-title">The Data Science Skills That Actually Get You Hired</div>
+            <p class="art-card-exc">The skills hiring managers say they want and the skills that actually predict success in the role are not the same list.</p>
             <div class="art-card-foot"><span class="art-card-meta">TDS</span><a href="https://towardsdatascience.com" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#5a2d0c,#C17B2F)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Harvard Business Review</span>
             <div class="art-card-hdr-title">How to Transition Into Data Science from Another Field</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Career · Transition</div>
             <div class="art-card-title">How to Transition Into Data Science from Another Field</div>
+            <p class="art-card-exc">Domain expertise is an underrated asset in data science. How to frame your existing background as a genuine advantage.</p>
             <div class="art-card-foot"><span class="art-card-meta">HBR</span><a href="https://hbr.org" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#3d1e00,#8B4513)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">MIT Technology Review</span>
             <div class="art-card-hdr-title">Will AI Replace Data Scientists? The Honest Answer</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Career · Future of Work</div>
             <div class="art-card-title">Will AI Replace Data Scientists? The Honest Answer</div>
+            <p class="art-card-exc">AI is automating parts of the job — but creating entirely new categories of work that require human judgment to navigate.</p>
             <div class="art-card-foot"><span class="art-card-meta">MIT Tech Review</span><a href="https://www.technologyreview.com" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#7a3b1e,#d4875a)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">KDNuggets</span>
             <div class="art-card-hdr-title">Building Your Data Science Portfolio That Gets Noticed</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Career · Portfolio</div>
             <div class="art-card-title">Building a Data Science Portfolio That Gets Noticed</div>
+            <p class="art-card-exc">What hiring managers actually look at in a portfolio, and why most candidates optimise for the wrong things.</p>
             <div class="art-card-foot"><span class="art-card-meta">KDNuggets</span><a href="https://www.kdnuggets.com" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
         <div class="art-card">
-          <div class="art-card-hdr" style="background:linear-gradient(145deg,#4d2600,#9a5200)">
+          <div class="art-card-hdr" style="background:linear-gradient(rgba(8,18,35,0.45),rgba(8,18,35,0.72)),url('https://images.unsplash.com/photo-1573164713988-8665fc963095?w=480&q=80') center/cover no-repeat;">
             <span class="art-card-src">Towards Data Science</span>
             <div class="art-card-hdr-title">From Data Analyst to Data Scientist: The Real Difference</div>
           </div>
           <div class="art-card-body">
             <div class="art-card-cat">Career · Growth</div>
             <div class="art-card-title">From Data Analyst to Data Scientist: The Real Difference</div>
+            <p class="art-card-exc">It's not about the tools or the job title — it's about how you frame problems and communicate uncertainty.</p>
             <div class="art-card-foot"><span class="art-card-meta">TDS</span><a href="https://towardsdatascience.com" target="_blank" class="art-card-link">Read →</a></div>
           </div>
         </div>
@@ -752,7 +790,7 @@ function initSlider(id){
   if(!track)return;
   var cards=[...track.querySelectorAll('.art-card')];
   var dotsEl=document.getElementById('dots-'+id);
-  var VIS=3, total=cards.length, maxPage=Math.max(0,total-VIS);
+  var VIS=5, total=cards.length, maxPage=Math.max(0,total-VIS);
   sliders[id]={track:track,cur:0,max:maxPage,dotsEl:dotsEl,vis:VIS};
   dotsEl.innerHTML='';
   // one dot per slide position
@@ -768,7 +806,7 @@ function slideTo(id,pos){
   var s=sliders[id];
   s.cur=Math.max(0,Math.min(pos,s.max));
   // each card is 33.333% wide; shift by that per step
-  s.track.style.transform='translateX(-'+(s.cur*(100/3))+'%)';
+  s.track.style.transform='translateX(-'+(s.cur*(100/5))+'%)';
   [...s.dotsEl.querySelectorAll('.sl-dot')].forEach(function(d,i){d.classList.toggle('on',i===s.cur);});
 }
 function slide(id,dir){slideTo(id,sliders[id].cur+dir);}
